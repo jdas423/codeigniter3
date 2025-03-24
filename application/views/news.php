@@ -1054,7 +1054,6 @@
                             </div>
                         </div>
                     </div> <!-- End Between form -->
-                    <script type="text/javascript" src="https://www.vaidam.com/assets/js/searchpage.js"></script>
                 </aside>
             </div>
         </div>

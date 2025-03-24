@@ -1,22 +1,64 @@
 <style>
-    .hospital_filter+.select2-container--default .select2-selection--single,
-    .department_filter1+.select2-container--default .select2-selection--single {
-        border-radius: 0 8px 8px 0 !important
-    }
-
-    .country_filter,
-    .city_filter {
-        width: 30%;
-    }
-
-    .department_filter1 {
-        border: 1px solid #c9c9c9 !important;
-        height: 44px;
-    }
-
     @media screen and (min-width: 768px) {
-        .department_filter1 {
-            width: 40% !important;
+
+        .country_filter,
+        .city_filter {
+            width: 30%
+        }
+
+        .department_filter,
+        .tag_filter {
+            width: 35%
+        }
+
+        .department_filter+.select2-container--default .select2-selection--single {
+            border-radius: 8px 0 0 8px !important
+        }
+
+        .country_filter+.select2-container--default .select2-selection--single {
+            border-radius: 0 8px 8px 0 !important
+        }
+
+        .error-message {
+            width: 30%;
+            display: inline-block;
+            color: #FFFFFF;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .error-message {
+            color: #FFFFFF;
+            display: inline-block;
+        }
+    }
+
+    #search_btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .loader {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        animation: spin 1s linear infinite;
+        margin-right: 10px;
+        display: none;
+    }
+
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
         }
     }
 </style> <!-- Breadcrumb section -->
@@ -28,8 +70,7 @@
                     <ol class="breadcrumb mt-3">
                         <li class="breadcrumb-item"><a class="text-secondary" href="https://www.vaidam.com"
                                 title="Home">Home</a></li>
-                        <li class="breadcrumb-item"><span class="text-secondary" title="Hospitals">Hospitals</span>
-                        </li>
+                        <li class="breadcrumb-item"><span class="text-secondary" title="Cost">Cost</span></li>
                     </ol>
                 </nav>
             </div>
@@ -37,18 +78,15 @@
     </div>
 </section>
 <section class="list-search hero-bg pt-5 pt-md-0">
-    <div class="container-fluid patern-row justify-content-between d-none d-md-flex px-0">
-        <!-- <img class="hero-patern-l" src="https://www.vaidam.com/assets/anchor/images/hero-bg-patern.webp" width="240" height="125" alt="bg-patern"> -->
-        <img class="hero-patern-l" src="https://www.vaidam.com/assets/anchor/images/hero-bg-patern.webp" width="240"
-            height="125" title="bg-patern" alt="bg-patern">
-        <!-- <img class="hero-patern-r flip-img" src="https://www.vaidam.com/assets/anchor/images/hero-bg-patern.webp" width="240" height="125" alt="bg-patern"> -->
-        <img class="hero-patern-r flip-img" src="https://www.vaidam.com/assets/anchor/images/hero-bg-patern.webp"
-            width="240" height="125" title="bg-patern" alt="bg-patern">
-    </div>
+    <div class="container-fluid patern-row justify-content-between d-none d-md-flex px-0"> <img class="hero-patern-l"
+            src="<?php echo base_url('assets/img/').'hero-bg-patern.webp'?>" width="240" height="125"
+            alt="bg-patern" title="Patern"> <img class="hero-patern-r flip-img"
+            src="<?php echo base_url('assets/img/').'hero-bg-patern.webp'?>" width="240" height="125"
+            alt="bg-patern" title="Patern"> </div>
     <div class="container">
         <div class="row">
-            <div class="col-11 mx-auto">
-                <h1 class="text-center">Find Your Ideal Hospital</h1>
+            <div class="col-12 mx-auto">
+                <h1 class="text-center">Know the Cost of Your Treatments</h1>
             </div>
         </div>
     </div>
@@ -58,38 +96,67 @@
         <div class="row">
             <div class="close-button-box bg-theam-2"> <button
                     class="close-mob-filter align-content-center align-items-center gap-3 py-2" id="CloseMobFilter">
-                    <img src="https://d3lclm53tbcdw6.cloudfront.net/dr_list_v1/images/go-to-back-arrow.svg" width="28"
+                    <img src="<?php echo base_url('assets/img/').'go-to-back-arrow.svg'?>" width="28"
                         height="28" title="Close fillter" alt="Close fillter">
                     <p class="mb-0">Go to back</p>
                 </button> </div>
             <div class="col-10 mx-auto">
                 <form class="search-new-search-box row mt-3 align-items-center position-relative" autocomplete="off">
-                    <div class="search-fieald d-flex flex-wrap gap-2 gap-md-0 col-lg-10 col-md-9"> <select
-                            class="country_filter select2 select2-hidden-accessible" id="country_filter"
-                            onchange="if (!window.__cfRLUnblockHandlers) return false; getCitiesFilter(this.options[this.selectedIndex].value);"
-                            data-select2-id="country_filter" tabindex="-1" aria-hidden="true">
-                            <option value="" data-select2-id="2">Select Country</option>
-                            <option value="IN">India</option>
-                            <option value="TR">Turkey</option>
-                            <option value="AE">United Arab Emirates</option>
-                            <option value="DE">Germany</option>
-                            <option value="TN">Tunisia</option>
-                            <option value="KR">South Korea</option>
-                            <option value="EG">Egypt</option>
-                            <option value="ES">Spain</option>
-                            <option value="FR">France</option>
-                            <option value="MY">Malaysia</option>
-                            <option value="TH">Thailand</option>
-                            <option value="CY">Cyprus</option>
-                            <option value="ZA">South Africa</option>
-                            <option value="SG">Singapore</option>
-                            <option value="IL">Israel</option>
-                            <option value="CZ">Czech Republic</option>
-                            <option value="AT">Austria</option>
-                            <option value="PL">Poland</option>
-                            <option value="CH">Switzerland</option>
+                    <div class="search-fieald d-flex flex-wrap gap-2 gap-md-0 col-lg-10 col-md-9">
+                        <!-- Department --> <select class="department_filter select2 select2-hidden-accessible"
+                            id="department_filter"
+                            onchange="if (!window.__cfRLUnblockHandlers) return false; getTags(this.options[this.selectedIndex].value);"
+                            data-select2-id="department_filter" tabindex="-1" aria-hidden="true">
+                            <option value="" data-select2-id="2">Select Department</option>
+                            <option value="26">CARDIOLOGY AND CARDIAC SURGERY</option>
+                            <option value="3">ONCOLOGY AND ONCOSURGERY</option>
+                            <option value="256">HEMATOLOGY</option>
+                            <option value="2">NEUROLOGY AND NEUROSURGERY</option>
+                            <option value="38">SPINE SURGERY</option>
+                            <option value="1">ORTHOPEDICS</option>
+                            <option value="30">IVF and INFERTILITY</option>
+                            <option value="37">ROUTINE HEALTH CHECK-UPS</option>
+                            <option value="29">GYNECOLOGY</option>
+                            <option value="39">TRANSPLANT SURGERY</option>
+                            <option value="254">GASTROENTEROLOGY</option>
+                            <option value="33">OBESITY OR BARIATRIC SURGERY</option>
+                            <option value="4">COSMETIC AND PLASTIC SURGERY</option>
+                            <option value="27">DENTAL TREATMENT</option>
+                            <option value="40">UROLOGY TREATMENT</option>
+                            <option value="253">NEPHROLOGY</option>
+                            <option value="31">GENERAL SURGERY</option>
+                            <option value="35">OPTHALMOLOGY</option>
+                            <option value="28">ENT SURGERY</option>
+                            <option value="724">HEPATOLOGY</option>
+                            <option value="41">VASCULAR SURGERY</option>
                         </select><span class="select2 select2-container select2-container--default" dir="ltr"
-                            data-select2-id="1" style="width: 275.675px;"><span class="selection"><span
+                            data-select2-id="1" style="width: 321.625px;"><span class="selection"><span
+                                    class="select2-selection select2-selection--single" role="combobox"
+                                    aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                    aria-labelledby="select2-department_filter-container"><span
+                                        class="select2-selection__rendered" id="select2-department_filter-container"
+                                        role="textbox" aria-readonly="true" title="Select Department">Select
+                                        Department</span><span class="select2-selection__arrow" role="presentation"><b
+                                            role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                                aria-hidden="true"></span></span> <!-- Tags --> <select
+                            class="tag_filter select2 select2-hidden-accessible" id="tag_filter"
+                            data-select2-id="tag_filter" tabindex="-1" aria-hidden="true">
+                            <option value="" data-select2-id="4">Select Procedure</option>
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                            data-select2-id="3" style="width: 321.625px;"><span class="selection"><span
+                                    class="select2-selection select2-selection--single" role="combobox"
+                                    aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                    aria-labelledby="select2-tag_filter-container"><span
+                                        class="select2-selection__rendered" id="select2-tag_filter-container"
+                                        role="textbox" aria-readonly="true" title="Select Procedure">Select
+                                        Procedure</span><span class="select2-selection__arrow" role="presentation"><b
+                                            role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                                aria-hidden="true"></span></span> <!-- Country --> <select
+                            class="country_filter select2 select2-hidden-accessible" id="country_filter"
+                            data-select2-id="country_filter" tabindex="-1" aria-hidden="true">
+                            <option value="" data-select2-id="6">Select Country</option>
+                        </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                            data-select2-id="5" style="width: 275.675px;"><span class="selection"><span
                                     class="select2-selection select2-selection--single" role="combobox"
                                     aria-haspopup="true" aria-expanded="false" tabindex="0"
                                     aria-labelledby="select2-country_filter-container"><span
@@ -97,51 +164,24 @@
                                         role="textbox" aria-readonly="true" title="Select Country">Select
                                         Country</span><span class="select2-selection__arrow" role="presentation"><b
                                             role="presentation"></b></span></span></span><span class="dropdown-wrapper"
-                                aria-hidden="true"></span></span> <select
-                            class="city_filter select2 select2-hidden-accessible" id="city_filter"
-                            data-select2-id="city_filter" tabindex="-1" aria-hidden="true">
-                            <option value="" data-select2-id="4">All Cities</option>
-                        </select><span class="select2 select2-container select2-container--default" dir="ltr"
-                            data-select2-id="3" style="width: 275.675px;"><span class="selection"><span
-                                    class="select2-selection select2-selection--single" role="combobox"
-                                    aria-haspopup="true" aria-expanded="false" tabindex="0"
-                                    aria-labelledby="select2-city_filter-container"><span
-                                        class="select2-selection__rendered" id="select2-city_filter-container"
-                                        role="textbox" aria-readonly="true" title="All Cities">All
-                                        Cities</span><span class="select2-selection__arrow" role="presentation"><b
-                                            role="presentation"></b></span></span></span><span class="dropdown-wrapper"
-                                aria-hidden="true"></span></span> <select
-                            class="department_filter1 select2 select2-hidden-accessible" id="department_filter1"
-                            data-select2-id="department_filter1" tabindex="-1" aria-hidden="true">
-                            <option value="" data-select2-id="6">All Departments</option>
-                        </select><span class="select2 select2-container select2-container--default" dir="ltr"
-                            data-select2-id="5" style="width: 367.575px;"><span class="selection"><span
-                                    class="select2-selection select2-selection--single" role="combobox"
-                                    aria-haspopup="true" aria-expanded="false" tabindex="0"
-                                    aria-labelledby="select2-department_filter1-container"><span
-                                        class="select2-selection__rendered" id="select2-department_filter1-container"
-                                        role="textbox" aria-readonly="true" title="All Departments">All
-                                        Departments</span><span class="select2-selection__arrow" role="presentation"><b
-                                            role="presentation"></b></span></span></span><span class="dropdown-wrapper"
-                                aria-hidden="true"></span></span> </div>
+                                aria-hidden="true"></span></span>
+                    </div>
                     <div class="col-lg-2 col-md-3 mt-3 mt-md-0">
                         <div class="d-grid"> <button type="button"
                                 class="btn btn-primary search-btn btn-danger border-0" id="search_btn"
-                                onclick="if (!window.__cfRLUnblockHandlers) return false; applyFilterOnHospList();">
-                                <div id="loader" class="loader" style="display: none;"></div> <span
-                                    id="search_text">Search</span>
+                                onclick="if (!window.__cfRLUnblockHandlers) return false; applyFilterOnCost();">
+                                <div id="loader" class="loader"> </div> <span id="search_text">Search</span>
                             </button> </div>
                     </div>
                     <div class="col-12"> <span
                             class="close-mob-filter close-mob-filter-text fw-bolder fs-5 text-danger justify-content-center">Close</span>
                     </div>
-                    <div class="mt-2" style="display: none; color: white " id="country_error"> <span>Please select a
-                            country</span> </div>
+                    <div id="error-message-container" class="col-12  mt-3"></div>
                 </form>
             </div>
             <div class="col-12 text-center d-none d-md-block mt-4"> <img
-                    src="<?php echo base_url("assets/img/")?>hospital-basepage-bg.webp" width="198" height="124"
-                    title="Hero bg-2" alt="hero bg-2"> </div>
+                    src="<?php echo base_url('assets/img/').'filter-below-img.png'?>" width="140" height="124"
+                    title="Find the cost of medical procedures" alt="hero bg-2"> </div>
         </div>
     </div>
 </section>
@@ -149,34 +189,90 @@
     <div class="container">
         <div class="row py-5">
             <div class="col-12 related-link-box">
-                <h2 class="mb-4">Top Hospitals Across India, Turkey, and Thailand</h2>
+                <h2 class="mb-4">Find Out Prices for Treatments in India, Turkey, and Thailand</h2>
                 <div class="p-4 rounded-4 border bg-light">
-                    <h3>Top Hospitals in India</h3>
+                    <h3>Treatment Cost in India</h3>
                     <ul>
-                        <?php
-                          foreach($hospitals["India"] as $hospital){
-                              echo '<li><a href="https://www.vaidam.com/hospitals/medanta-medicity-gurgaon"
-                                    title="'.$hospital["name"].'">'.$hospital["name"].'</a></li>';
-                          }
-                        ?>
+                        <li><a title="Neurosurgery Cost In India"
+                                href="https://www.vaidam.com/search/neurosurgery/india">Neurosurgery Cost In
+                                India</a></li>
+                        <li><a title="Heart Surgery Cost in India"
+                                href="https://www.vaidam.com/search/heart-surgery/india">Heart Surgery Cost in
+                                India</a></li>
+                        <li><a title="Urology Treatment Cost in India"
+                                href="https://www.vaidam.com/search/urology-problem/india">Urology Treatment Cost in
+                                India</a></li>
+                        <li><a title="Cancer Treatment Cost in India"
+                                href="https://www.vaidam.com/search/cancer/india">Cancer Treatment Cost in India</a>
+                        </li>
+                        <li><a title="IVF Treatment Cost in India" href="https://www.vaidam.com/search/ivf/india">IVF
+                                Treatment Cost in India</a></li>
+                        <li><a title="Gynaecological Surgery Cost in India"
+                                href="https://www.vaidam.com/search/gynecological-surgery/india">Gynaecological
+                                Surgery Cost in India</a></li>
+                        <li><a title="Heart Surgery Cost in India"
+                                href="https://www.vaidam.com/search/heart-surgery/india">Heart Surgery Cost in
+                                India</a></li>
+                        <li><a title="Kidney Transplant Cost In India"
+                                href="https://www.vaidam.com/search/kidney-transplant/india">Kidney Transplant Cost
+                                In India</a></li>
+                        <li><a title="Gamma Knife Surgery Cost In India"
+                                href="https://www.vaidam.com/search/gamma-knife/india">Gamma Knife Surgery Cost In
+                                India</a></li>
                     </ul>
-                    <h3>Top Hospitals in Turkey</h3>
+                    <h3>Treatment Cost in Turkey</h3>
                     <ul>
-                    <?php
-                          foreach($hospitals["Turkey"] as $hospital){
-                              echo '<li><a href="https://www.vaidam.com/hospitals/medanta-medicity-gurgaon"
-                                    title="'.$hospital["name"].'">'.$hospital["name"].'</a></li>';
-                          }
-                        ?>
+                        <li><a title="Neurosurgery Cost In Turkey"
+                                href="https://www.vaidam.com/search/neurosurgery/turkey">Neurosurgery Cost In
+                                Turkey</a></li>
+                        <li><a title="Heart Surgery Cost in Turkey"
+                                href="https://www.vaidam.com/search/heart-surgery/turkey">Heart Surgery Cost in
+                                Turkey</a></li>
+                        <li><a title="Urology Treatment Cost in Turkey"
+                                href="https://www.vaidam.com/search/urology-problem/turkey">Urology Treatment Cost
+                                in Turkey</a></li>
+                        <li><a title="Cancer Treatment Cost in Turkey"
+                                href="https://www.vaidam.com/search/cancer/turkey">Cancer Treatment Cost in
+                                Turkey</a></li>
+                        <li><a title="IVF Treatment Cost in Turkey" href="https://www.vaidam.com/search/ivf/turkey">IVF
+                                Treatment Cost in Turkey</a>
+                        </li>
+                        <li><a title="Gynaecological Surgery Cost in Turkey"
+                                href="https://www.vaidam.com/search/gynecological-surgery/turkey">Gynaecological
+                                Surgery Cost in Turkey</a></li>
+                        <li><a title="Heart Surgery Cost in Turkey"
+                                href="https://www.vaidam.com/search/heart-surgery/turkey">Heart Surgery Cost in
+                                Turkey</a></li>
+                        <li><a title="Cosmetic and Plastic Surgery Cost In Turkey"
+                                href="https://www.vaidam.com/search/cosmetic/turkey">Cosmetic and Plastic Surgery
+                                Cost In Turkey</a></li>
                     </ul>
-                    <h3>Top Hospitals in Thailand</h3>
+                    <h3>Treatment Cost in Thailand</h3>
                     <ul>
-                    <?php
-                          foreach($hospitals["Thailand"] as $hospital){
-                              echo '<li><a href="https://www.vaidam.com/hospitals/medanta-medicity-gurgaon"
-                                    title="'.$hospital["name"].'">'.$hospital["name"].'</a></li>';
-                          }
-                        ?>
+                        <li><a title="Neurosurgery Cost In Thailand"
+                                href="https://www.vaidam.com/search/neurosurgery/thailand">Neurosurgery Cost In
+                                Thailand</a></li>
+                        <li><a title="Heart Surgery Cost in Thailand"
+                                href="https://www.vaidam.com/search/heart-surgery/thailand">Heart Surgery Cost in
+                                Thailand</a></li>
+                        <li><a title="Urology Treatment Cost in Thailand"
+                                href="https://www.vaidam.com/search/urology-problem/thailand">Urology Treatment Cost
+                                in Thailand</a></li>
+                        <li><a title="Cancer Treatment Cost in Thailand"
+                                href="https://www.vaidam.com/search/cancer/thailand">Cancer Treatment Cost in
+                                Thailand</a></li>
+                        <li><a title="IVF Treatment Cost in Thailand"
+                                href="https://www.vaidam.com/search/ivf/thailand">IVF Treatment Cost in Thailand</a>
+                        </li>
+                        <li><a title="Gynaecological Surgery Cost in Thailand"
+                                href="https://www.vaidam.com/search/gynecological-surgery/thailand">Gynaecological
+                                Surgery Cost in Thailand</a></li>
+                        <li><a title="Heart Surgery Cost in Thailand"
+                                href="https://www.vaidam.com/search/heart-surgery/thailand">Heart Surgery Cost in
+                                Thailand</a></li>
+                        <li><a title="Cosmetic and Plastic Surgery Cost In Thailand"
+                                href="https://www.vaidam.com/search/cosmetic/thailand">Cosmetic and Plastic Surgery
+                                Cost In Thailand</a></li>
                     </ul>
                 </div>
             </div>
@@ -187,59 +283,49 @@
     <div class="container">
         <div class="row mt-4">
             <div class="col-lg-8 mb-0">
-                <h2 class="mb-4">See How Vaidam Helps You Choose the Best Hospitals Effortlessly</h2>
+                <h2 class="mb-4">See How Vaidam Makes Treatment Cost Search Easy</h2>
                 <div class="list-row">
                     <div class="col-12 d-flex my-4 my-md-5">
                         <div class="heding-icon bg-theam-2 rounded-circle"> <img class="hicon-img"
-                                src="<?php echo base_url("assets/img/") . 'Comprehensive-List-of-Hospitals.webp'; ?>"
+                                src="<?php echo base_url('assets/img/').'Global-Cost-Transparency.webp'?>"
                                 width="33" height="33" title="Top Medical Opinions" alt="Top Medical Opinions">
                         </div>
                         <div class="list-content">
-                            <h3>Comprehensive List of Hospitals</h3>
-                            <p>Wide range of hospitals from multiple countries for you to choose as per your need
+                            <h3>Global Cost Transparency</h3>
+                            <p>Access pricing information from top medical centers worldwide</p>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex my-4 my-md-5">
+                        <div class="heding-icon bg-theam-2 rounded-circle"> <img class="hicon-img"
+                                src="<?php echo base_url('assets/img/').'Informed-Decision-Making.webp'?>"
+                                width="33" height="33" title="Top Medical Opinions" alt="Top Medical Opinions">
+                        </div>
+                        <div class="list-content">
+                            <h3>Informed Decision-Making</h3>
+                            <p>Make well-informed choices about where to receive treatment and all associated costs
                             </p>
                         </div>
                     </div>
                     <div class="col-12 d-flex my-4 my-md-5">
                         <div class="heding-icon bg-theam-2 rounded-circle"> <img class="hicon-img"
-                                src="<?php echo base_url("assets/img/") . 'Expert-Guidance-and-Support.webp'; ?>"
+                                src="<?php echo base_url('assets/img/').'Tailored-Cost-Estimates.webp'?>"
                                 width="33" height="33" title="Top Medical Opinions" alt="Top Medical Opinions">
                         </div>
                         <div class="list-content">
-                            <h3>Expert Guidance and Support</h3>
-                            <p>Access to a team of medical coordinators who assist you throughout the process, from
-                                initial consultation to post-treatment follow-up</p>
+                            <h3>Tailored Cost Estimates</h3>
+                            <p>Receive personalized cost estimates based on your specific treatment needs and
+                                preferred destinations</p>
                         </div>
                     </div>
                     <div class="col-12 d-flex my-4 my-md-5">
                         <div class="heding-icon bg-theam-2 rounded-circle"> <img class="hicon-img"
-                                src="<?php echo base_url("assets/img/").'Language-Support.webp'; ?>" width="33"
-                                height="33" title="Top Medical Opinions" alt="Top Medical Opinions"> </div>
-                        <div class="list-content">
-                            <h3>Language Support</h3>
-                            <p>Multilingual support to help bridge communication gaps</p>
-                        </div>
-                    </div>
-                    <div class="col-12 d-flex my-4 my-md-5">
-                        <div class="heding-icon bg-theam-2 rounded-circle"> <img class="hicon-img"
-                                src="<?php echo base_url("assets/img/").'Patient-Reviews-and-Ratings.webp'; ?>"
-                                width="33" height="33" title="Top Medical Opinions" alt="Top Medical Opinions">
+                                src="<?php echo base_url('assets/img/').'Planned-Medical-Travel.webp'?>" width="33"
+                                height="33" title="Top Medical Opinions" alt="Top Medical Opinions">
                         </div>
                         <div class="list-content">
-                            <h3>Patient Reviews and Ratings</h3>
-                            <p>Real feedback from past patients, enabling you to make decisions based on the
-                                experiences of others</p>
-                        </div>
-                    </div>
-                    <div class="col-12 d-flex my-4 my-md-5">
-                        <div class="heding-icon bg-theam-2 rounded-circle"> <img class="hicon-img"
-                                src="<?php echo base_url("assets/img/").'Transparency-in-Pricing.webp'; ?>"
-                                width="33" height="33" title="Top Medical Opinions" alt="Top Medical Opinions">
-                        </div>
-                        <div class="list-content">
-                            <h3>Transparency in Pricing</h3>
-                            <p>Detailed information on treatment costs, helping you make informed decisions without
-                                hidden fees or surprises</p>
+                            <h3>Planned Medical Travel</h3>
+                            <p>Plan your treatment with confidence, knowing you’ve found the best partner to take
+                                care of your needs</p>
                         </div>
                     </div>
                 </div>
@@ -263,17 +349,17 @@
                                     <div id="custom-form-doctor-card col-12">
                                         <form class="row" id="secondFormInList" autocomplete="off"> <input type="hidden"
                                                 name="_token" id="_token"
-                                                value="Pr7tVZv55ticm6SFGMUg6rZCoxZDEFprIXdCSSXG"> <input type="hidden"
+                                                value="3DJqIWQ3ESw7nlQKf6EQJJJacPgWIZoQrCCmfT9C"> <input type="hidden"
                                                 name="pagetype" value=""> <input type="hidden" name="page_source"
-                                                id="page_source-sfil" value="https://www.vaidam.com/hospitals"> <input
+                                                id="page_source-sfil" value="https://www.vaidam.com/search"> <input
                                                 type="hidden" name="lang1" id="lang-sfil"
-                                                value="https://www.vaidam.com/hospitals"> <input type="hidden"
-                                                name="second_form" value="yes"> <input type="hidden"
-                                                name="preferredLocation" id="preferredLocation" value=""> <input
+                                                value="https://www.vaidam.com/search">
+                                            <input type="hidden" name="second_form" value="yes"> <input type="hidden"
+                                                name="preferredLocation" id="preferredLocation" value="India"> <input
                                                 type="hidden" name="Form_Location" id="Form_Location" value="Main Form">
                                             <input type="hidden" name="Page_Type" id="Page_Type"
-                                                value="Hospital Anchor Page"> <input type="hidden" name="c_url"
-                                                id="c_url" value="">
+                                                value="Search Anchor Page"> <input type="hidden" name="c_url" id="c_url"
+                                                value="">
                                             <div class="col-12 mb-3"> <label for="inputName" class="form-label">
                                                     Name </label> <input type="text" class="form-control" id="name"
                                                     placeholder="Patient Name" name="name" aria-label="Patient Name"
@@ -616,22 +702,25 @@
                 <div class="accordion-item rounded-2">
                     <h3 class="accordion-header"> <button class="accordion-button bg-theam-2 collapsed" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
-                            aria-controls="collapseOne"> How do you select the hospitals
-                            included on your list? </button> </h3>
+                            aria-controls="collapseOne"> How is the cost of a medical
+                            procedure determined? </button> </h3>
                     <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFacilities">
                         <div class="accordion-body">
-                            <p>We have a stringent criteria to include hospitals in our list and here are some of
-                                the factors we take into consideration: </p>
+                            <p>The cost of medical procedure depends on a variety of factors. Here are some most
+                                common ones:</p>
+                            <p> </p>
                             <ul>
-                                <li>Size of the hospital - Number of beds/ ICU Bed/ Operation theaters</li>
-                                <li>Availability of diagnostic services - PET CT, MRI, CT, Nuclear medicine, In
-                                    House Lab etc</li>
-                                <li>Availability of blood bank</li>
-                                <li>Total number of departments - sub specialization and super specializations
-                                    offered</li>
-                                <li>Accreditation received in last 5-10 years - JCI, ISQua, GHA etc</li>
-                                <li>Published information on re-admissions, Hospital Acquired Infections, Long Term
-                                    success rates on the surgeries offered</li>
+                                <li>Need of diagnostics - other than cancer cases, most diagnostic packages are part
+                                    of the package.</li>
+                                <li>Number of days stay in the hospital</li>
+                                <li>ICU days in hospital</li>
+                                <li>Use of blood products</li>
+                                <li>High end implants used during the surgery</li>
+                                <li>Use of special medical equipments and modalities such as Robots, Cyberknife/
+                                    Gammaknife</li>
+                                <li>Hours in Operations theater</li>
+                                <li>Doctor experience</li>
+                                <li>Hospital chosen</li>
                             </ul>
                             <p></p>
                         </div>
@@ -640,16 +729,20 @@
                 <div class="accordion-item rounded-2">
                     <h3 class="accordion-header"> <button class="accordion-button bg-theam-2 collapsed" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                            aria-controls="collapseThree"> What accreditations do the
-                            hospitals on your list hold? </button> </h3>
+                            aria-controls="collapseThree"> Why do medical procedure costs vary
+                            between countries? </button> </h3>
                     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFacilities">
                         <div class="accordion-body">
-                            <p>There are some global accreditation bodies and some which are specific to a country.
-                                We consider both when evaluating listing of hospitals on Vaidam.com. </p>
+                            <p>Cost of medical procedure varies across countries for multiple factors and here are
+                                some of the common ones:</p>
+                            <p> </p>
                             <ul>
-                                <li>International Accreditations - JCI, ISQua, GHA, ACHSI, CCHSA</li>
-                                <li>Country Specific - NABH for India; Healthcare Accreditation Institute in
-                                    Thailand; SAS in Turkey etc</li>
+                                <li>Labor cost - Doctors, Nursing, Healthcare professionals</li>
+                                <li>Land cost where hospital is built</li>
+                                <li>Government regulations especially taxation on healthcare</li>
+                                <li>Imports of medical products, medications vs local manufacturing</li>
+                                <li>Currency exchange rate fluctuations</li>
+                                <li>Legal protection costs for healthcare professionals</li>
                             </ul>
                             <p></p>
                         </div>
@@ -658,21 +751,28 @@
                 <div class="accordion-item rounded-2">
                     <h3 class="accordion-header"> <button class="accordion-button bg-theam-2 collapsed" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false"
-                            aria-controls="collapsefive"> Can I view detailed information
-                            about the hospitals on your list? </button> </h3>
+                            aria-controls="collapsefive"> What is included in the quoted price
+                            for a medical procedure? </button> </h3>
                     <div id="collapsefive" class="accordion-collapse collapse" data-bs-parent="#accordionFacilities">
                         <div class="accordion-body">
-                            <p>Yes, we cover following information about hospitals on their detail pages: </p>
+                            <p>We try to be as transparent as possible with our patients. Most common inclusions and
+                                exclusions are clearly listed when giving cost estimates for medical procedures.
+                                Here are some examples of inclusions:</p>
+                            <p> </p>
                             <ul>
-                                <li>Brief about the hospital</li>
-                                <li>Departments available</li>
-                                <li>List of top doctors working there</li>
-                                <li>Facilities offered - Food, Currency exchange, In-Room services, Transportation
-                                </li>
-                                <li>Infrastructure</li>
-                                <li>Location - Distance from airport</li>
-                                <li>Happy patient stories of that hospital</li>
-                                <li>Photo Gallery</li>
+                                <li>Cost of hospital room, Operation theater, Surgeon fee, Assistant Surgeon Fee,
+                                    Anesthetist, Consumables and medicines</li>
+                            </ul>
+                            <p></p>
+                            <p>Here are some examples of exclusions:</p>
+                            <p> </p>
+                            <ul>
+                                <li>Consultation with another department/ speciality which is unrelated to the
+                                    medical procedure</li>
+                                <li>Use of special equipments to tackle certain viral infections such as HIV,
+                                    Hepatitis C etc</li>
+                                <li>Unplanned increase in ICU days/ extra days in room than mentioned in the cost
+                                    estimate</li>
                             </ul>
                             <p></p>
                         </div>
@@ -681,29 +781,41 @@
                 <div class="accordion-item rounded-2">
                     <h3 class="accordion-header"> <button class="accordion-button bg-theam-2 collapsed" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false"
-                            aria-controls="collapseSeven"> How can I choose the right hospital
-                            for my treatment? </button> </h3>
+                            aria-controls="collapseSeven"> Are there any hidden costs I should
+                            be aware of? </button> </h3>
                     <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFacilities">
                         <div class="accordion-body">
-                            <p>Finding a hospital is never an easy task. We have provided a lot of details on
-                                Vaidam.com for our patients to consume specific information relevant to their case,
-                                however, you are also welcome to speak in person with our case managers on call and
-                                they can also share their previous experience of handling thousands of similar
-                                patients.</p>
+                            <p>However much we try to be informative and transparent, not all costs can be covered -
+                                post surgery medication, need for physiotherapy/ rehabilitation after surgery can
+                                sometimes come across as unplanned expenses. Based on our prior experience, the cost
+                                estimates given are accurate in 95% cases but be prepared for 10-20% price
+                                difference in the remaining 5% unforeseen circumstance. More than hidden costs, the
+                                bigger concerns are unreliable medical diagnosis presented by patients before
+                                travelling. Doctors can give the estimate based on the information and medical
+                                diagnosis shared by patients from home countries. When the information changes upon
+                                fresh investigations in India, the cost of treatment may vary.</p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item rounded-2">
                     <h3 class="accordion-header"> <button class="accordion-button bg-theam-2 collapsed" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false"
-                            aria-controls="collapseNine"> Do the hospitals on your list cater
-                            to international patients? </button> </h3>
+                            aria-controls="collapseNine"> How can I get an accurate estimate
+                            for my medical procedure? </button> </h3>
                     <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionFacilities">
                         <div class="accordion-body">
-                            <p>Yes, almost all hospitals listed on Vaidam.com have services specific to
-                                International patients. Many of them have dedicated departments and teams for the
-                                comfort and needs of international patients. For language assistance, Vaidam also
-                                offers complimentary interpreter services in many countries of our operations.</p>
+                            <p>Here are some best practices to receive accurate estimates from doctors:</p>
+                            <p> </p>
+                            <ul>
+                                <li>Vaidam gets a detailed history of the patient to capture the treatments taken,
+                                    investigations done, length of disease etc. Please share all those details
+                                    accurately to the best of your knowledge.</li>
+                                <li>Your medical reports should be recent - preferably less than 3 months old.
+                                    Anything more than 6 months old medical reports are very unreliable.</li>
+                                <li>Ask for a video consultation with your preferred doctor and exchange information
+                                    before your trip.</li>
+                            </ul>
+                            <p></p>
                         </div>
                     </div>
                 </div>
@@ -712,75 +824,58 @@
                 <div class="accordion-item rounded-2">
                     <h3 class="accordion-header"> <button class="accordion-button bg-theam-2 collapsed" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                            aria-controls="collapseTwo"> Can I contact the hospital directly
-                            for more information? </button> </h3>
+                            aria-controls="collapseTwo"> Does the cost of the procedure
+                            include travel and accommodation? </button> </h3>
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFacilities">
                         <div class="accordion-body">
-                            <p>Yes, if you are not comfortable talking to our team or need validation on the
-                                information shared by our team from the hospital side, we will be happy to put you
-                                in touch with the hospital department to allay your concerns. Although not every
-                                hospital has the language interpreter you may need for yourself, our team can assist
-                                you bridge the gap.</p>
+                            <p>Most hospitals do NOT include travel and accommodation costs in their estimates.
+                                However, we at Vaidam can help you plan a complete travel itinerary with near
+                                accurate cost estimates.</p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item rounded-2">
                     <h3 class="accordion-header"> <button class="accordion-button bg-theam-2 collapsed" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                            aria-controls="collapseFour"> How do I know the hospital is safe
-                            and up to international standards? </button> </h3>
+                            aria-controls="collapseFour"> Can I get financing options or
+                            payment plans for my medical procedure? </button> </h3>
                     <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFacilities">
                         <div class="accordion-body">
-                            <p>International accreditation achieved by the hospital is an indicator for high focus
-                                on patient safety and outcomes. Don't forget to check if the accreditation of the
-                                hospital is still valid or expired/ revoked.</p>
+                            <p>Unfortunately these options are not offered by service providers in India. It is
+                                recommended you check for financing or payment plans with your local banks and
+                                financial institutions in your home country.</p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item rounded-2">
                     <h3 class="accordion-header"> <button class="accordion-button bg-theam-2 collapsed" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
-                            aria-controls="collapseSix"> What services are offered to
-                            international patients at these hospitals? </button> </h3>
+                            aria-controls="collapseSix"> How do I know if my insurance will
+                            cover the cost of the procedure abroad? </button> </h3>
                     <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFacilities">
                         <div class="accordion-body">
-                            <p>Most hospitals offer following special considerations for international patients:
-                            </p>
-                            <ul>
-                                <li>Airport transfers</li>
-                                <li>International lounge in hospital for comfort</li>
-                                <li>Priority for doctor appointments and investigations</li>
-                                <li>Money Exchange</li>
-                                <li>SIM card availability</li>
-                                <li>Listing of nearby hotels/ guest houses</li>
-                            </ul>
-                            <p></p>
+                            <p>You should consult with your insurance provider to confirm coverage for international
+                                medical procedures. If you share your insurance details with the Vaidam assigned
+                                case manager, we will be happy to find out the coverage for your insurance in the
+                                country you plan to travel.</p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item rounded-2">
                     <h3 class="accordion-header"> <button class="accordion-button bg-theam-2 collapsed" type="button"
                             data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false"
-                            aria-controls="collapseEight"> Are there patient testimonials
-                            available for the hospitals? </button> </h3>
+                            aria-controls="collapseEight"> What should I do if I receive a
+                            lower cost estimate from another provider? </button> </h3>
                     <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFacilities">
                         <div class="accordion-body">
-                            <p>Yes, Vaidam has handled more than 100,000 patients. We have a lot of patient stories
-                                available on our platform
-                                (https://www.vaidam.com/knowledge-center/patient-testimonials) and our youtube
-                                channel (https://www.youtube.com/vaidam) to ensure high patient satisfaction.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item rounded-2">
-                    <h3 class="accordion-header"> <button class="accordion-button bg-theam-2 collapsed" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false"
-                            aria-controls="collapseTen"> Can I arrange a tour of the hospital
-                            before deciding? </button> </h3>
-                    <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionFacilities">
-                        <div class="accordion-body">
-                            <p>We can arrange for virtual tours or share the videos of the hospital infrastructure.
-                                Our team can help coordinate these details.</p>
+                            <p>When comparing costs across different service providers, you should try and make as
+                                much apple to apple comparison as possible. If you compare the cost offered by a
+                                high end tertiary care hospital vs a small nursing home, you have to acknowledge the
+                                risk of care delivery and sub-standard clinical outcomes. Good news is, we at Vaidam
+                                work with more than 200 hospitals in India and can find a matching price you may
+                                have received from another service provider. Since our job is to assess the
+                                requirement of infrastructure needed to manage your case, we can recommend an
+                                alternative center without compromising too much on the clinical outcomes.</p>
                         </div>
                     </div>
                 </div>
@@ -788,38 +883,6 @@
         </div>
     </div>
 </section>
-<style>
-    /* Styling for the search button */
-    #search_btn {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .loader {
-        border: 4px solid #f3f3f3;
-        border-top: 4px solid #3498db;
-        border-radius: 50%;
-        width: 20px;
-        height: 20px;
-        animation: spin 1s linear infinite;
-        margin-right: 10px;
-        display: none;
-    }
-
-
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-</style>
- <!-- End Body Content Start --> <!-- Term and Policy Modal Section Starts--> <!-- Terms Modal -->
 <div class="modal" id="formTerms">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
         <div class="modal-content">
@@ -846,7 +909,7 @@
         onclick="if (!window.__cfRLUnblockHandlers) return false; setformtype('','','enquiry sticky button','','Footer','','');"
         href="https://www.vaidam.com/lp/consult-online" class="readmore-outline me-2" title="Need Help">Need
         Help?</a> <a
-        href="https://api.whatsapp.com/send?phone=919971616131&amp;text=Hello,%20please%20contact%20me%20regarding%20http://www.vaidam.com/hospitals?source=wpchat_HASB,%20Thank%20you!"
+        href="https://api.whatsapp.com/send?phone=919971616131&amp;text=Hello,%20please%20contact%20me%20regarding%20http://www.vaidam.com/search?source=wpchat_CASB,%20Thank%20you!"
         title="Whatsapp Chat" class="readmore whatsapp-color"><img loading="lazy"
             src="https://d3lclm53tbcdw6.cloudfront.net/v2/new-home/images/whatsaap-icon01.webp" alt="Chat with Us"
             title="Chat with Us" width="30" height="29" class="img-fluid me-1"> Chat</a> </div>
@@ -855,7 +918,7 @@
         class="bg-theam border-0 fillter-on-mobile py-2 sticky-send-enquiry-smallscreen text-white"><img
             src="https://www.vaidam.com/assets/dr_list_v1/images/filter-icon.webp" alt="Filter" title="Filter"
             width="26" height="26"> <span>Filter</span></button> <a class="whatsapp-btn-mob wa_button_clicked"
-        href="https://api.whatsapp.com/send?phone=919971616131&amp;text=Hello,%20please%20contact%20me%20regarding%20http://www.vaidam.com/hospitals?source=wpchat_HASB,%20Thank%20you!"><img
+        href="https://api.whatsapp.com/send?phone=919971616131&amp;text=Hello,%20please%20contact%20me%20regarding%20http://www.vaidam.com/search?source=wpchat_CASB,%20Thank%20you!"><img
             src="https://www.vaidam.com/assets/v2/hospital_details/images/whatsapp-icon-white.png" title="Whatsapp Us"
             alt="Whatsapp Us"><span>Whatsapp Us</span></a> </div>
 <style>
@@ -939,3 +1002,6 @@
     }
 </style> <!-- Sticky buttton for mobile view End -->
 <script type="text/javascript" src="https://www.vaidam.com/assets/js/bootstrap.min.js"></script>
+
+
+
