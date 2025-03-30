@@ -4,11 +4,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Admin extends CI_Controller{
 	
 	public function __construct() {
-        parent::__construct();		
+        parent::__construct();
+        $this->load->model('doctors_model');		
     }
 
     public function index(){
-        $this->load->view('admin');
+        $data=[];
+        $data["doctors"]=$this->doctors_model->get_doctor_name();
+        $this->load->view('admin',$data);
     }
 
 
@@ -37,7 +40,6 @@ class Admin extends CI_Controller{
             $arr['schedule']=$this->input->post('schedule');
            
            
-            $this->load->model('doctors_model');
             
             $config['upload_path']   = FCPATH . 'assets/img/';
             $config['allowed_types'] = 'gif|jpg|png|jpeg';

@@ -7,6 +7,12 @@ class Doctors_model extends CI_Model {
         parent::__construct();
         $this->load->database();
     }
+
+    public function get_doctor_name(){
+        $query="SELECT id, name from doctors";
+        
+        return $this->db->query($query)->result_array();
+    }
      
     public function get_doctor_by_id($id){
         $query="SELECT doctors.*,hospitals.name as hospital_name,hospitals.images as hospital_image_arr,hospitals.address as hospital_address,
