@@ -8,9 +8,30 @@ class Admin extends CI_Controller{
         $this->load->model('doctors_model');		
     }
 
+
+    public function get_doctor_by_id($id){
+        $data=$this->doctors_model->get_doctor_by_id($id);
+        if(empty($data)){
+            $this->output
+                ->set_status_header(404)
+                ->set_content_type('application/json')
+                ->set_output(json_encode([
+                    'success' => false,
+                    'error' => 'Doctor not found'
+                ]));
+            return;
+        }
+        $this->output
+            ->set_content_type('application/json')
+            ->set_output(json_encode([
+                'success' => true,
+                'doctor' => $data[0]
+            ]));
+    }
+
     public function index(){
         $data=[];
-        $data["doctors"]=$this->doctors_model->get_doctor_name();
+        $data["doctors"]=$this->doctors_model->get_doctor_details();
         $this->load->view('admin',$data);
     }
 

@@ -8,8 +8,8 @@ class Doctors_model extends CI_Model {
         $this->load->database();
     }
 
-    public function get_doctor_name(){
-        $query="SELECT id, name from doctors";
+    public function get_doctor_details(){
+        $query="SELECT * from doctors";
         
         return $this->db->query($query)->result_array();
     }

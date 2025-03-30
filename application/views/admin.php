@@ -415,11 +415,12 @@
                 <h2>Admin Panel</h2>
             </div>
             <ul class="sidebar-menu">
-                <li><a href="#hospitals"><i class="fas fa-hospital"></i> Hospitals</a></li>
-                <li><a href="#doctors"><i class="fas fa-user-md"></i> Doctors</a></li>
-                <li><a href="#patients"><i class="fas fa-procedures"></i> Patients</a></li>
-                <li><a href="#appointments"><i class="fas fa-calendar-check"></i> Appointments</a></li>
-                <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="#hospitals"><i class="fas fa-hospital-alt"></i> Hospitals</a></li>
+                <li><a href="#doctors"><i class="fas fa-stethoscope"></i> Doctors</a></li>
+                <li><a href="#authors"><i class="fas fa-pen-alt"></i> Authors</a></li>
+                <li><a href="#news"><i class="far fa-newspaper"></i> News</a></li>
+                <li><a href="#blogs"><i class="fas fa-blog"></i> Blogs</a></li>
+                <li><a href="#testimonials"><i class="fas fa-quote-left"></i> Testimonials</a></li>
             </ul>
         </div>
 
