@@ -1,7 +1,10 @@
 SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `authors`;
-DROP TABLE IF EXISTS `other_table1`;
-DROP TABLE IF EXISTS `other_table2`;
+DROP TABLE IF EXISTS `blogs`;
+DROP TABLE IF EXISTS `doctors`;
+DROP TABLE IF EXISTS `hospitals`;
+DROP TABLE IF EXISTS `news`;
+DROP TABLE IF EXISTS `testimonials`;
 SET FOREIGN_KEY_CHECKS = 1;
 
 -- Authors table
