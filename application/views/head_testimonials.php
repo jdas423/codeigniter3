@@ -3,12 +3,12 @@
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8">
     <meta charset="utf-8">
-    <link rel="canonical" href="https://www.vaidam.com/knowledge-center">
-    <title>Medical and Healthcare Blogs | Vaidam Health</title>
+    <link rel="canonical" href="https://www.vaidam.com/knowledge-center/patient-testimonials">
+    <title>Blogs About Patient Testimonials | Vaidam Health</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="description"
-        content="Read the best healthcare blogs and articles about treatments and procedures from one of the top medical travel companies, Vaidam Health.">
+        content="Get the latest updates about Patient Testimonials. Check different procedures, their hospitals, doctors, and relevant costs from the best platform, Vaidam Health.">
     <meta name="author" content="Vaidam Health">
     <link rel="stylesheet" type="text/css" href="https://d3lclm53tbcdw6.cloudfront.net/newui/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://d3lclm53tbcdw6.cloudfront.net/css/bootstrap.min.css">
@@ -35,6 +35,52 @@
     <!-- <title>Best Doctors in India. Treatment in India</title> -->
     <script src="https://d3lclm53tbcdw6.cloudfront.net/js/jquery-new.min.js" type="text/javascript"></script>
     <script src="https://d3lclm53tbcdw6.cloudfront.net/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KB745T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!='dataLayer'?'&l='+l:'';j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;j.type='text/javascript';j.async=true;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KB745T');</script> -->
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VQCCBJC0X8" type="text/javascript"></script>
+    <script type="text/javascript"> window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VQCCBJC0X8'); </script> <!-- Google Tag Manager -->
+    <script type="text/javascript">(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KB745T');</script> <!-- End Google Tag Manager -->
+    <script type="text/javascript"> (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "ec2br1y8qa"); </script>
+    <script type="application/ld+json"> {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+               "@type": "ListItem",
+               "position": 0,
+               "item": {
+                   "@id": "https://www.vaidam.com",
+                   "name": "Home"
+               }
+           },{
+               "@type": "ListItem",
+               "position": 1,
+               "item": {
+                   "@id": "https://www.vaidam.com/knowledge-center",
+                   "name": "Blogs"
+               }
+           },{
+               "@type": "ListItem",
+               "position": 2,
+               "item": {
+                   "name": "Patient Testimonials"
+               }
+           }]
+} </script>
     <style type="text/css">
         .tagline {
             zoom: 85%;
@@ -757,8 +803,14 @@
                 display: none
             }
         }
-    </style>
+    </style> <!-- End Modal Form Css -->
+    <script type="text/javascript" async=""
+        src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/989645465/?random=1742830810828&amp;cv=11&amp;fst=1742830810828&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45je53j1v879240773za200&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=102482433~102788824~102803279~102813109&amp;u_w=1536&amp;u_h=864&amp;url=https%3A%2F%2Fwww.vaidam.com%2Fknowledge-center%2Fpatient-testimonials&amp;ref=https%3A%2F%2Fwww.vaidam.com%2Ftravel-visa&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Blogs%20About%20Patient%20Testimonials%20%7C%20Vaidam%20Health&amp;npa=0&amp;pscdl=noapi&amp;auid=794519535.1741836252&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B134.0.6998.118%7CNot%253AA-Brand%3B24.0.0.0%7CGoogle%2520Chrome%3B134.0.6998.118&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4"></script>
 </head>
 
 <body role="document" class="html not-front not-logged-in one-sidebar sidebar-first page-doctors i18n-en">
+    <!-- Google Tag Manager (noscript) --> <noscript><iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KB745T" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->
+    <!-- header -->
     <div class="container-fluid home-page"></div>

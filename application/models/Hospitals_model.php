@@ -50,5 +50,19 @@ class Hospitals_model extends CI_Model {
         $query="SELECT DISTINCT name FROM hospitals where country='$country' order by hospital_rating desc limit 10";
         return $this->db->query($query)->result_array();
     }
+
+    public function get_popular_hospitals_by_specific_city($country,$city){
+        $query="SELECT name, MIN(id) as id 
+            FROM hospitals 
+            WHERE country='$country' AND city='$city' 
+            GROUP BY name 
+            ORDER BY MAX(hospital_rating) DESC 
+            LIMIT 10";
+        return $this->db->query($query)->result_array();
+    }
+    public function get_hospital_by_id($id){
+        $query="SELECT * FROM hospitals where id='$id'";
+        return $this->db->query($query)->result_array();
+    }
     
 }

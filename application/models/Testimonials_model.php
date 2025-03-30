@@ -13,6 +13,11 @@ class Testimonials_model extends CI_Model {
         $query="SELECT image,topic,description,patient_name,created_on FROM testimonials order by created_on desc limit 4";  
         return $this->db->query($query)->result_array();
     }
+
+    public function get_testimonial_by_id($id) {
+        $query="SELECT * FROM testimonials where id=$id";  
+        return $this->db->query($query)->row_array();
+    }
   
 
     

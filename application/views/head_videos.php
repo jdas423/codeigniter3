@@ -17,7 +17,7 @@
     <link href="https://d3lclm53tbcdw6.cloudfront.net/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link href="https://d3lclm53tbcdw6.cloudfront.net/css/common-min.css" rel="stylesheet" /> -->
     <!-- <link href="https://d3lclm53tbcdw6.cloudfront.net/css/inner-responsive-min.css" rel="stylesheet" /> -->
-    <link href="https://d3lclm53tbcdw6.cloudfront.net/css/multi-nav.css" rel="stylesheet">
+    <link href="<?php echo base_url("assets/css/multi-nav.css") ?>" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.min.css"> -->
     <link href="https://d3lclm53tbcdw6.cloudfront.net/v2/doctor_detail/v1/css/style.css" rel="stylesheet">
     <!-- <link href="https://www.vaidam.com/assets/v2/doctor_detail/v1/css/style.css" rel="stylesheet" /> -->
