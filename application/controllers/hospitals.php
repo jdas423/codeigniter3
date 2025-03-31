@@ -36,6 +36,19 @@ class Hospitals extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function hospitals_country_dept($country,$dept)
+	{
+		$headerData = load_header_data();
+		$this->load->model('hospitals_model');
+		// $data["hospital"] = $this->hospitals_model->get_hospital_by_id($id);
+		$this->load->view('head_hospitals_country_dept', );
+		$this->load->view('header',$headerData);
+		$this->load->view('hospitals_country_dept');
+		$this->load->view('footer');
+	}
+
+
+
 
 
 }

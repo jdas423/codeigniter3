@@ -29,9 +29,11 @@ CREATE TABLE `blogs` (
   `topic` varchar(150) COLLATE latin1_swedish_ci NOT NULL,
   `image` varchar(100) COLLATE latin1_swedish_ci NOT NULL,
   `content` text COLLATE latin1_swedish_ci NOT NULL,
-  `created_on` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_on` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_on` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `author_id` int(11) DEFAULT NULL,
   `title` varchar(200) COLLATE latin1_swedish_ci DEFAULT NULL,
+  `category` varchar(50) COLLATE latin1_swedish_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `author_id` (`author_id`),
   CONSTRAINT `fk_blog_author` FOREIGN KEY (`author_id`) REFERENCES `authors` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
@@ -235,3 +237,51 @@ VALUES
 
 ('Knee Replacement Recovery', 'Maria Garcia', 65, 'Female', 'Spain', 'Dr. Robert Chen', 'Cleveland Clinic', 'Total Knee Replacement', 'After years of pain, my knee replacement at Cleveland Clinic gave me my mobility back. Dr. Chen is truly skilled.', 102, 'Orthopedic success story', 'knee_replacement.jpg');
 
+CREATE TABLE IF NOT EXISTS patients (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    country VARCHAR(2) NOT NULL COMMENT '2-letter country code',
+    city VARCHAR(100) NOT NULL,
+    fees VARCHAR(20) DEFAULT NULL COMMENT 'Fees in local currency',
+    state VARCHAR(100) DEFAULT NULL,
+    country_phone_code VARCHAR(5) DEFAULT NULL COMMENT 'e.g., +1, +44',
+    phone_number VARCHAR(20) NOT NULL,
+    medical_problems TEXT NOT NULL,
+    age VARCHAR(20) DEFAULT NULL COMMENT 'Can be age in years or date of birth',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    INDEX idx_email (email),
+    INDEX idx_country (country),
+    INDEX idx_phone (phone_number)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- First patient record
+INSERT INTO patients (name, email, country, city, state, country_phone_code, phone_number, medical_problems, age,fees)
+VALUES (
+    'John Smith',
+    'john.smith@example.com',
+    'US',
+    'New York',
+    'NY',
+    '+1',
+    '5551234567',
+    'Patient requires consultation for persistent chest pain and irregular heartbeat. History of hypertension.',
+    '45 Yrs',
+    '1500'
+);
+
+-- Second patient record
+INSERT INTO patients (name, email, country, city, state, country_phone_code, phone_number, medical_problems, age,fees)
+VALUES (
+    'Emma Johnson',
+    'emma.j@example.com',
+    'GB',
+    'London',
+    NULL,
+    '+44',
+    '2079876543',
+    'Needs evaluation for possible coronary artery disease. Family history of heart conditions.',
+    '1985-05-15',
+    '2000'
+);

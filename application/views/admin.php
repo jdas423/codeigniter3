@@ -656,7 +656,7 @@
                                         echo "<tr>";
                                         echo "<td>{$doctor['id']}</td>";
                                         echo "<td>{$doctor['name']}</td>";
-                                        echo "<td><button class='btn btn-primary edit-btn'>Edit</button></td>";
+                                        echo "<td><button class='btn btn-primary edit-btn' id='edit-btn-".$doctor['id']."'>Edit</button></td>";
                                         echo "</tr>";
                                       }
                                     ?>
@@ -1032,6 +1032,44 @@
 
 
        })
+   </script>
+
+   <script>
+     $(document).ready(function (){
+         $(".edit-btn").click(function () {
+             const id = $(this).attr("id").split("-")[2];
+             $.ajax({
+                 url: `/sample/admin/get_doctor_by_id/${id}`,
+                 type: 'POST',
+                 success: function (response) {
+                     console.log(response);
+                     // Populate the form with the response data
+                     $("#name").val(response.name);
+                     $("#qualifications").val(response.qualifications);
+                     $("#surgeries").val(response.surgeries);
+                     $("#designation").val(response.designation);
+                     $("#ratings").val(response.ratings);
+                     $("#working_hospital_id").val(response.working_hospital_id);
+                     $("#about").val(response.about);
+                     $("#fees").val(response.fees);
+                     $("#medical_problems").val(response.medical_problems);
+                     $("#medical_procedures").val(response.medical_procedures);
+                     $("#education_and_training").val(response.education_and_training);
+                     $("#honours_and_awards").val(response.honours_and_awards);
+                     $("#work_experience").val(response.work_experience);
+                     $("#related_video").val(response.related_video);
+                     $("#profile").val(response.profile);
+                     $("#year_of_experience").val(response.year_of_experience);
+                     $("#no_of_ratings").val(response.no_of_ratings);
+
+                 },
+                 error: function (error) {
+                     console.error("Error fetching doctor data:", error);
+                 }
+             });
+         });
+
+     })
    </script>
 </body>
 </html>

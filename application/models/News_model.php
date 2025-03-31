@@ -9,7 +9,7 @@ class News_model extends CI_Model {
     }
 
     public function get_recent_news() {
-        $query="SELECT image,topic,title FROM news order by created_on desc limit 4";  
+        $query="SELECT id,image,topic,title FROM news order by created_on desc limit 4";  
         return $this->db->query($query)->result_array();
     }
 

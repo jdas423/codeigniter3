@@ -31,10 +31,10 @@ class Hospitals_model extends CI_Model {
         $h_arr=[];
         foreach($country_arr as $c){
             if($c['country']=="India"){
-                $query="SELECT name,images,city FROM hospitals WHERE country='".$c['country']."'order by hospital_rating desc limit 4";
+                $query="SELECT name,images,city,id FROM hospitals WHERE country='".$c['country']."'order by hospital_rating desc limit 4";
             }
             else{
-                $query="SELECT name,images,city FROM hospitals WHERE country='".$c['country']."'order by hospital_rating desc limit 2";
+                $query="SELECT name,images,city,id FROM hospitals WHERE country='".$c['country']."'order by hospital_rating desc limit 2";
             }
             $hospitals=$this->db->query($query)->result_array();
             foreach($hospitals as $h){

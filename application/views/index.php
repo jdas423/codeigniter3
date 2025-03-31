@@ -101,22 +101,26 @@
                         <div class="d-flex justify-content-center justify-content-sm-start rating_cnt">
                             <div class="google-rating d-flex align-items-center me-3">
                                 <figure class="m-0 me-3">
-                                    <img src="<?php echo base_url('assets/img/') . '/google-icon.webp' ?>" loading="lazy"
-                                        alt="Google Rating" title="Google Rating Info image">
+                                    <img src="<?php echo base_url('assets/img/') . '/google-icon.webp' ?>"
+                                        loading="lazy" alt="Google Rating" title="Google Rating Info image">
                                 </figure>
                                 <div class="info">
                                     <div class="icons d-flex align-items-center"> <span>4.7</span>
                                         <div class="ms-2"> <img alt="Rating Star"
-                                                src="<?php echo base_url('assets/img/') . '/full_star.webp' ?>" width="13"
-                                                height="13" title="Doctor Rating image"> <img alt="Rating Star"
-                                                src="<?php echo base_url('assets/img') . '/full_star.webp' ?>" width="13"
-                                                height="13" title="Doctor Rating image"> <img alt="Rating Star"
-                                                src="<?php echo base_url('assets/img') . '/full_star.webp' ?>" width="13"
-                                                height="13" title="Doctor Rating image"> <img alt="Rating Star"
-                                                src="<?php echo base_url('assets/img') . '/full_star.webp' ?>" width="13"
-                                                height="13" title="Doctor Rating image"> <img alt="Rating Star"
-                                                src="<?php echo base_url('assets/img') . '/full_star.webp' ?>" width="13"
-                                                height="13" title="Doctor Rating image"> </div>
+                                                src="<?php echo base_url('assets/img/') . '/full_star.webp' ?>"
+                                                width="13" height="13" title="Doctor Rating image"> <img
+                                                alt="Rating Star"
+                                                src="<?php echo base_url('assets/img') . '/full_star.webp' ?>"
+                                                width="13" height="13" title="Doctor Rating image"> <img
+                                                alt="Rating Star"
+                                                src="<?php echo base_url('assets/img') . '/full_star.webp' ?>"
+                                                width="13" height="13" title="Doctor Rating image"> <img
+                                                alt="Rating Star"
+                                                src="<?php echo base_url('assets/img') . '/full_star.webp' ?>"
+                                                width="13" height="13" title="Doctor Rating image"> <img
+                                                alt="Rating Star"
+                                                src="<?php echo base_url('assets/img') . '/full_star.webp' ?>"
+                                                width="13" height="13" title="Doctor Rating image"> </div>
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +155,8 @@
                                     <div class="panel panel-default">
                                         <div class="panel-body">
                                             <form class="form-horizontal form-customize" id="genericForm"
-                                                autocomplete="off"> <input type="hidden" name="_token" id="_token"
+                                                autocomplete="off">
+                                                <input type="hidden" name="_token" id="_token"
                                                     value="VrCBp2fPJ9k5Iz7LDJEqRiFcmUeYiU98KzykBnEb"> <input
                                                     type="hidden" name="pagetype" value=""> <input type="hidden"
                                                     name="page_source" id="page_source" value="https://www.vaidam.com/">
@@ -513,7 +518,8 @@
                                                                 style="font-weight: bold" id="">Terms of Use</span>
                                                             <button type="button" class="close px-2 py-1 lh-1"
                                                                 data-bs-dismiss="modal" aria-label="Close"> <span
-                                                                    aria-hidden="true">×</span> </button> </div>
+                                                                    aria-hidden="true">×</span> </button>
+                                                        </div>
                                                         <div class="modal-body" id="terms_of_use"> </div>
                                                         <div class="modal-footer"> <button type="button"
                                                                 class="btn btn-secondary px-4 py-1"
@@ -531,7 +537,8 @@
                                                                 style="font-weight: bold" id="">Privacy Policy</span>
                                                             <button type="button" class="close px-2 py-1 lh-1"
                                                                 data-bs-dismiss="modal" aria-label="Close"> <span
-                                                                    aria-hidden="true">×</span> </button> </div>
+                                                                    aria-hidden="true">×</span> </button>
+                                                        </div>
                                                         <div class="modal-body" id="privacy_policy"> </div>
                                                         <div class="modal-footer"> <button type="button"
                                                                 class="btn btn-secondary px-4 py-1"
@@ -675,21 +682,21 @@
             </div>
             <div
                 class="row row-cols-lg-6 row-cols-md-4 row-cols-sm-3 row-cols-2 justify-content-center g-3 mt-0 cntry-bxes">
-                <div class="col"> <a href="https://www.vaidam.com/india"
+                <div class="col"> <a href="<?php echo base_url('country/') . 'india' ?>"
                         class="country-bx d-flex align-items-center w-100 h-100" title="Vaidam">
                         <figure><img loading="lazy" src="<?php echo base_url('assets/img/') . '/india-flag.webp' ?>"
                                 width="24" height="24" alt="India Flag" class="img-fluid" title="Indian Flag image">
                         </figure>
                         <p>India</p>
                     </a> </div>
-                <div class="col"> <a href="https://www.vaidam.com/turkey"
+                <div class="col"> <a href="<?php echo base_url('country/') . 'turkey' ?>"
                         class="country-bx d-flex align-items-center w-100 h-100" title="Vaidam-Turkey">
                         <figure><img loading="lazy" src="<?php echo base_url('assets/img/') . "turkey-flag.webp" ?>"
                                 alt="Turkey Flag" width="24" height="24" class="img-fluid" title="Turkey Flag image">
                         </figure>
                         <p>Turkey</p>
                     </a> </div>
-                <div class="col"> <a href="https://www.vaidam.com/thailand"
+                <div class="col"> <a href="<?php echo base_url('country/') . 'thailand' ?>"
                         class="country-bx d-flex align-items-center w-100 h-100" title="Vaidam Thailand">
                         <figure><img loading="lazy" src="<?php echo base_url('assets/img/') . "thailand-flag.webp" ?>"
                                 alt="Thailand Flag" width="24" height="18" class="img-fluid"
@@ -758,8 +765,9 @@
                         data-department="Neurosurgery" class="treatment_bx d-block d-sm-flex position-relative"
                         data-bs-toggle="modal" data-bs-target="#treatmentModalNeurosurgery">
                         <figure class="m-0"><img loading="lazy"
-                                src="<?php echo base_url('assets/img/') . "Neurosurgery.png" ?>" alt="Neurosurgery Service"
-                                class="img-fluid" title="Neurosurgery Service image"></figure>
+                                src="<?php echo base_url('assets/img/') . "Neurosurgery.png" ?>"
+                                alt="Neurosurgery Service" class="img-fluid" title="Neurosurgery Service image">
+                        </figure>
                         <div class="info">
                             <h3>Neurosurgery</h3>
                             <p>The specialty of neurosurgical care includes both adult and pediatric patients.</p>
@@ -813,8 +821,8 @@
                         data-department="Orthopedics" class="treatment_bx d-block d-sm-flex position-relative"
                         data-bs-toggle="modal" data-bs-target="#treatmentModalOrthopedics">
                         <figure class="m-0"><img loading="lazy"
-                                src="<?php echo base_url('assets/img/') . "Orthopedics.svg" ?>" alt="Orthopedics Service"
-                                class="img-fluid" title="Orthopedics Service image"></figure>
+                                src="<?php echo base_url('assets/img/') . "Orthopedics.svg" ?>"
+                                alt="Orthopedics Service" class="img-fluid" title="Orthopedics Service image"></figure>
                         <div class="info">
                             <h3>Orthopedics</h3>
                             <p>Expert joint replacements and bone deformities solutions.</p>
@@ -885,8 +893,8 @@
                         data-department="Weight Loss" class="treatment_bx d-block d-sm-flex position-relative"
                         data-bs-toggle="modal" data-bs-target="#treatmentModalWeight-Loss">
                         <figure class="m-0"><img loading="lazy"
-                                src="<?php echo base_url('assets/img/') . "Weight Loss.svg" ?>" alt="Weight Loss Service"
-                                class="img-fluid" title="Weight Loss Service image"></figure>
+                                src="<?php echo base_url('assets/img/') . "Weight Loss.svg" ?>"
+                                alt="Weight Loss Service" class="img-fluid" title="Weight Loss Service image"></figure>
                         <div class="info">
                             <h3>Weight Loss</h3>
                             <p>Effective bariatric surgery options.</p>
@@ -953,7 +961,7 @@
                     onclick="if (!window.__cfRLUnblockHandlers) return false; setformtype('','','home page enquiry button after multi specialty','','home page','','');"
                     href="https://www.vaidam.com/lp/consult-online" class="readmore-outline me-2"
                     title="Consult-Online">Need Assistance?</a> <a
-                    href="https://api.whatsapp.com/send?phone=919971616131&amp;text=Hello,%20please%20contact%20me%20regarding%20https://www.vaidam.com?source=wpchat_HPTL,%20Thank%20you!"
+                    href="#"
                     title="Whatsapp Chat" class="readmore whatsapp-color wa_button_clicked"><img loading="lazy"
                         src="https://d3lclm53tbcdw6.cloudfront.net/v2/new-home/images/whatsaap-icon01.webp"
                         alt="Chat with Us" width="30" height="29" class="img-fluid me-1" title="Chat with US image">
@@ -978,7 +986,7 @@
 
                     echo '<div class="col">
                         <div class="col-country"> 
-                               <a href="https://www.vaidam.com/hospitals/india" title="Top Hospital in ' . $country . '">
+                               <a href="#" title="Top Hospital in ' . $country . '">
                                 <h4>' . $country . '<figure>
                                 <img src="https://d3lclm53tbcdw6.cloudfront.net/v2/new-home/images/' . strtolower($country) . '-flag.webp" 
                                 alt="' . $country . '-flag" width="24" height="24" class="img-fluid" title="' . $country . ' Flag image"></figure>
@@ -987,7 +995,7 @@
                             <div class="row row-cols-2 g-2 g-lg-3">';
                     foreach ($hospitals_arr as $h) {
                         echo ' <div class="col"> 
-                                    <a href="https://www.vaidam.com/hospitals/medanta-medicity-gurgaon" title="' . $h["name"] . "," . $h["city"] . '"> 
+                                    <a href="' . base_url('hospitals/hospital/') . $h["id"] . '" title="' . $h["name"] . "," . $h["city"] . '"> 
                                     <img loading="lazy" src="' . json_decode($h["images"])[0] . '" alt="' . $h["name"] . "," . $h["city"] . '" class="img-fluid" title="' . $h["name"] . "," . $h["city"] . '">
                                         <p>' . $h["name"] . "," . $h["city"] . '</p>
                                     </a> </div>';
@@ -1016,7 +1024,7 @@
                     setformtype('','','home page enquiry button on hospital block','','home page','','');"
                     href="https://www.vaidam.com/lp/consult-online" class="readmore-outline me-2"
                     title="Contact-Hospital">Contact Hospital</a>
-                <a href="https://api.whatsapp.com/send?phone=919971616131&amp;text=Hello,%20please%20contact%20me%20regarding%20https://www.vaidam.com?source=wpchat_HPHL,%20Thank%20you!"
+                <a href="#"
                     title="Whatsapp Chat" class="readmore whatsapp-color wa_button_clicked">
                     <img loading="lazy" src="<?php echo base_url('assets/img/') . 'whatsaap-icon01.webp' ?>"
                         alt="Chat with Us" width="30" height="29" class="img-fluid me-1" title="Chat with Us"> Chat</a>
@@ -1034,8 +1042,7 @@
                 <div class="col">
                     <div data-bs-toggle="modal" data-bs-target="#get_quote">
                         <div class="nag_price_bx d-flex align-items-center">
-                            <figure><img loading="lazy" src=<?php echo base_url('assets/img/') . "RHEUMATOLOGY-51.svg" ?>
-                                    alt="Knee Replacement" width="48" height="48" class="img-fluid"
+                            <figure><img loading="lazy" src=<?php echo base_url('assets/img/') . "RHEUMATOLOGY-51.svg" ?> alt="Knee Replacement" width="48" height="48" class="img-fluid"
                                     title="Knee Replacement"></figure>
                             <div class="info">
                                 <h3 class="title">Knee Replacement</h3>
@@ -1151,7 +1158,8 @@
                 <div class="col">
                     <div data-bs-toggle="modal" data-bs-target="#get_quote">
                         <div class="nag_price_bx d-flex align-items-center">
-                            <figure><img loading="lazy" src="<?php echo base_url('assets/img/') . 'Breast Cancer.svg' ?>"
+                            <figure><img loading="lazy"
+                                    src="<?php echo base_url('assets/img/') . 'Breast Cancer.svg' ?>"
                                     alt="Breast Implants" width="48" height="48" class="img-fluid"
                                     title="Breast Implants"></figure>
                             <div class="info">
@@ -1211,7 +1219,7 @@
                     onclick="if (!window.__cfRLUnblockHandlers) return false; setformtype('','','home page enquiry button on after treatment cost','','home page','','');"
                     href="https://www.vaidam.com/lp/consult-online" class="readmore-outline me-2" title="Get-Quote">Get
                     Quote</a> <a
-                    href="https://api.whatsapp.com/send?phone=919971616131&amp;text=Hello,%20please%20contact%20me%20regarding%20https://www.vaidam.com?source=wpchat_HPCL,%20Thank%20you!"
+                    href="#"
                     title="Whatsapp Chat" class="readmore whatsapp-color wa_button_clicked">
                     <img loading="lazy" src=<?php echo base_url('assets/img/') . "whatsaap-icon01.webp" ?>
                         alt="Chat with Us" width="30" height="29" class="img-fluid me-1" title="Chat with Us"> Chat</a>
@@ -1230,8 +1238,8 @@
                     <div class="row">
                         <div class="col position-relative">
                             <div class="work_bx">
-                                <figure><img loading="lazy" src=<?php echo base_url('assets/img/') . "noun-contact-us.svg" ?> alt="Share your case details"
-                                        width="56" height="56" class="img-fluid" title="Share your case details"><span
+                                <figure><img loading="lazy" src=<?php echo base_url('assets/img/') . "noun-contact-us.svg" ?> alt="Share your case details" width="56" height="56"
+                                        class="img-fluid" title="Share your case details"><span
                                         class="d-lg-none">01</span></figure>
                                 <h3>Contact us, share your case details and our team will get in touch with you.</h3>
                             </div>
@@ -1249,17 +1257,17 @@
                         <div class="col position-relative">
                             <div class="work_bx">
                                 <figure>
-                                    <img loading="lazy" src=<?php echo base_url('assets/img/') . "noun-booking-online.svg" ?>
-                                        alt="Get received by our team" width="56" height="56" class="img-fluid"
-                                        title="Get received by our team"><span class="d-lg-none">03</span>
+                                    <img loading="lazy" src=<?php echo base_url('assets/img/') . "noun-booking-online.svg" ?> alt="Get received by our team" width="56"
+                                        height="56" class="img-fluid" title="Get received by our team"><span
+                                        class="d-lg-none">03</span>
                                 </figure>
                                 <h3>Book flights and get received by our team at the airport</h3>
                             </div>
                         </div>
                         <div class="col position-relative">
                             <div class="work_bx">
-                                <figure><img loading="lazy" src=<?php echo base_url('assets/img/') . "noun-follow-up.svg" ?> alt="Get treated and fly back"
-                                        width="56" height="56" class="img-fluid" title="Get treated and fly back"><span
+                                <figure><img loading="lazy" src=<?php echo base_url('assets/img/') . "noun-follow-up.svg" ?> alt="Get treated and fly back" width="56" height="56"
+                                        class="img-fluid" title="Get treated and fly back"><span
                                         class="d-lg-none">04</span></figure>
                                 <h3>Get treated and fly back. We stay in touch with you for follow ups</h3>
                             </div>
@@ -1269,23 +1277,38 @@
                 <div class="col-md-4">
                     <div class="video-bx">
                         <div class="vaidam_yt_video_block home-page-video-block click-to-play-video know-work"
-                            id="player-XZtyGhf5LJ8"> <img loading="lazy"
+                            id="player-Cxg6xPmSFFU" onclick="playYouTubeVideo(this)"> <img loading="lazy"
                                 class="img-responsive video-icon-block video-block-imgages"
                                 src="https://www.vaidam.com/sites/all/themes/vaidam/v0/dist/img/video-icon.png"
                                 width="70" height="55" alt="Play Video" title="Play Video"> <img loading="lazy"
                                 class="img-responsive video-image home-page-footer-video-image footer-home-images lazy_img"
-                                id="XZtyGhf5LJ8" src="https://img.youtube.com/vi/XZtyGhf5LJ8/mqdefault.jpg" width="263"
+                                id="Cxg6xPmSFFU" src="https://img.youtube.com/vi/Cxg6xPmSFFU/mqdefault.jpg" width="263"
                                 height="148" alt="YouTube" title="YouTube Video">
                             <p class="text-center play-video-tag">Play Video</p>
                         </div>
                     </div>
+                    <script>
+                        function playYouTubeVideo(element) {
+                            const videoId = $(element).attr('id').replace('player-', '');
+
+                            $(element).html(`
+                                <iframe width="100%" height="315" 
+                                        src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen></iframe>
+                            `);
+                        }
+                    </script>
                 </div>
             </div>
+
             <div class="mt-4 pt-3 text-center">
                 <!-- <button type="button" data-src="https://www.youtube.com/embed/XZtyGhf5LJ8" class="readmore-blue video-btn mb-2 mb-sm-0 me-sm-2" data-bs-toggle="modal" data-bs-target="#videoModal">How does it works? Play Video</button> -->
                 <a onclick="if (!window.__cfRLUnblockHandlers) return false; setformtype('','','home page enquiry button after how does it work block','','home page','','');"
-                    href="https://www.vaidam.com/lp/consult-online" class="readmore-outline" title="Get-Started">Get
-                    Started</a> </div>
+                    href="#" class="readmore-outline" title="Get-Started">Get
+                    Started</a>
+            </div>
         </div>
     </section>
     <section>
@@ -1300,8 +1323,8 @@
                     <div
                         class="serv_bx d-flex d-sm-block d-md-flex align-items-start text-start text-sm-center text-md-start">
                         <figure>
-                            <img loading="lazy" src=<?php echo base_url('assets/img/') . "serv-icon07.webp" ?> width="26"
-                                height="26" alt="Medical Opinion and Cost Estimations" class="iimg-fluid"
+                            <img loading="lazy" src=<?php echo base_url('assets/img/') . "serv-icon07.webp" ?>
+                                width="26" height="26" alt="Medical Opinion and Cost Estimations" class="iimg-fluid"
                                 title="Medical Opinion and Cost Estimations">
                         </figure>
                         <div class="info">
@@ -1412,10 +1435,10 @@
                     href="https://www.vaidam.com/lp/consult-online" class="readmore-outline me-2"
                     title="Get-FREE-Assistance">
                 </a>
-                <a href="https://api.whatsapp.com/send?phone=919971616131&amp;text=Hello,%20please%20contact%20me%20regarding%20https://www.vaidam.com?source=wpchat_HPSS,%20Thank%20you!"
+                <a href="#"
                     title="Whatsapp Chat" class="readmore whatsapp-color wa_button_clicked">
-                    <img src=<?php echo base_url('assets/img/') . "whatsaap-icon01.webp" ?> alt="Chat with Us" width="30"
-                        height="29" class="img-fluid me-1" title="Chat with Us"> Chat</a>
+                    <img src=<?php echo base_url('assets/img/') . "whatsaap-icon01.webp" ?> alt="Chat with Us"
+                        width="30" height="29" class="img-fluid me-1" title="Chat with Us"> Chat</a>
                 <p class="mt-3">Our services are <strong>FREE</strong> and by using our services your hospital bill does
                     not increase!</p>
             </div>
@@ -1425,16 +1448,15 @@
         <div class="container">
             <div class="testimonial-title d-md-flex align-items-center justify-content-between">
                 <div class="rating d-flex align-items-center">
-                    <figure class="m-0"><img loading="lazy" src=<?php echo base_url('assets/img/') . "google-icon.webp" ?>
-                            alt="Google Rating" width="75" height="76" class="img-fluid" title="Google Rating">
+                    <figure class="m-0"><img loading="lazy" src=<?php echo base_url('assets/img/') . "google-icon.webp" ?> alt="Google Rating" width="75" height="76" class="img-fluid" title="Google Rating">
                     </figure>
                     <div class="info ps-2">
                         <div class="titl">Google Rating</div> <span class="d-flex">4.7 <span class="d-flex ms-2">
                                 <img alt="Rating Star" src=<?php echo base_url('assets/img/') . "full_star.webp" ?>
                                     width="22" height="3" title="Rating star"> <img alt="Rating Star" src=<?php echo base_url('assets/img/') . "full_star.webp" ?> width="22" height="3"
-                                    title="Rating star"> <img alt="Rating Star" src=<?php echo base_url('assets/img/') . "full_star.webp" ?> width="22" height="3"
-                                    title="Rating star"> <img alt="Rating Star" src=<?php echo base_url('assets/img/') . "full_star.webp" ?> width="22" height="3"
-                                    title="Rating star"> <img alt="Rating Star" src=<?php echo base_url('assets/img/') . "full_star.webp" ?> width="22" height="3"
+                                    title="Rating star"> <img alt="Rating Star" src=<?php echo base_url('assets/img/') . "full_star.webp" ?> width="22" height="3" title="Rating star"> <img
+                                    alt="Rating Star" src=<?php echo base_url('assets/img/') . "full_star.webp" ?>
+                                    width="22" height="3" title="Rating star"> <img alt="Rating Star" src=<?php echo base_url('assets/img/') . "full_star.webp" ?> width="22" height="3"
                                     title="Rating star"> </span></span>
                         <p>See all our reviews</p>
                     </div>
@@ -1442,10 +1464,10 @@
                 <div class="section-title text-center">
                     <h2>Satisfied Patients, Proud Service</h2>
                     <p class="my-3">100,000+ patients have trusted us since 2016.</p>
-                </div> <a href="https://bit.ly/4c6iqqQ" target="_blank" title="Google Reviews"
+                </div> <a href="#" target="_blank" title="Google Reviews"
                     class="readmore-outline d-none d-lg-block">View All Reviews</a>
             </div>
-            <div class="owl-carousel testimonial-slider slick-initialized slick-slider" style="height:100px;">
+            <!-- <div class="owl-carousel testimonial-slider slick-initialized slick-slider" style="height:100px;">
                 <div class="slick-list draggable">
                     <div class="slick-track"
                         style="opacity: 1; width: 18928px; transform: translate3d(-1456px, 0px, 0px);">
@@ -1470,7 +1492,125 @@
                         </div>
                     </div>
                 </div>
+            </div> -->
+            <div class="carousel">
+                <div class="carousel-item_l" id="item-1">My brother is still having treatment in Fortis HealthCare
+                    Institute through Vaidam Health. We have got amazing help in all processes ( finding great hospital,
+                    visa processing, accomodations and hospital process). Whenever we got issue, they are besides us to
+                    resolve it very quick. Specially thanks to Ethiopia representative 'Fasika' and the New delhi guy
+                    'Abdul Awol' and their manager. All are passionate and sincere to help us as a family, thanks so
+                    much. We are still in the hospital and I am sure this awesome help will continue to the end. I
+                    totally recommend Vaidam for those in need medical treatment abroad.
+                    quod! A, officiis quam.</div>
+                <div class="carousel-item_l" id="item-2">My brother is still having treatment in Fortis HealthCare
+                    Institute through Vaidam Health. We have got amazing help in all processes ( finding great hospital,
+                    visa processing, accomodations and hospital process).
+                    quod! A, officiis quam.</div>
+                <div class="carousel-item_l" id="item-3">My brother is still having treatment in Fortis HealthCare
+                    Institute through Vaidam Health. We have got amazing help in all processes ( finding great hospital,
+                    visa processing, accomodations and hospital process). Whenever we got issue, they are besides us to
+                    resolve it very quick. Specially thanks to Ethiopia representative 'Fasika' and the New delhi guy
+                    'Abdul Awol' and their manager. All are passionate and sincere to help us as a family, thanks so
+                    much. We are still in the hospital and I am sure this awesome help will continue to the end. I
+                    totally recommend Vaidam for those in need medical treatment abroad.
+                    quod! A, officiis quam.</div>
+                <div id="dots">
+                    <div class="dot active" id="dot-1"></div>
+                    <div class="dot" id="dot-2"></div>
+                    <div class="dot" id="dot-3"></div>
+                </div>
             </div>
+            <style>
+                .carousel {
+                    position: relative;
+                    width: 80%;
+                    height: 200px;
+                    overflow: hidden;
+                    margin:0 auto;
+                    font-size: 15px;
+                }
+
+                .carousel-item_l {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    padding:50px;
+                    text-align: center;
+                    padding:50px 100px 50px 100px;
+                    transition: transform 0.5s ease-in-out;
+                }
+
+                #item-1 {
+                    transform: translate(0, 0);
+                }
+
+                #item-2 {
+                    transform: translate(100%, 0);
+                }
+
+                #item-3 {
+                    transform: translate(200%, 0);
+                }
+
+                #dots {
+                display: flex; 
+                justify-content: center; 
+                margin-top: 20px;
+                position: absolute;
+                bottom: 0;
+                left: 46%;
+                }
+
+                .dot {
+                width: 12px; 
+                height: 12px;
+                border-radius: 50%;
+                background-color: #bbb;
+                margin: 0 8px; 
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                }
+
+                .dot.active {
+                background-color: #333; 
+                }
+
+                .dot:hover {
+                background-color: #888; 
+                }
+            </style>
+
+            <script>
+                $(document).ready(function(){
+                    let len=$('.carousel-item_l').length;
+                    console.log(len);
+                    let arr=[];
+                    for(let i=0;i<len;i++){
+                        arr.push(i*100);
+                    }
+                    let active_dot_ind=1;
+                    setInterval(function(){  
+                            arr=arr.map(item => item-100)  
+                            $('.carousel-item_l').each(function(index){      
+                                 $(this).css('transform','translate('+arr[index]+'%,0)');   
+                              });  
+                            $(`#dot-${active_dot_ind}`).removeClass('active');
+                            active_dot_ind++;
+                            if(active_dot_ind>len){
+                                active_dot_ind=1;
+                            }
+                            $(`#dot-${active_dot_ind}`).addClass('active');
+                            if(arr[0]==-200){
+                                arr.shift();
+                                arr.push(arr[arr.length-1]+100);
+                                $('.carousel>.carousel-item_l:first').clone(true).appendTo('.carousel');
+                                $('.carousel>.carousel-item_l:first').remove();
+                                $('.carousel>.carousel-item_l:last').css('transform','translate('+arr[arr.length-1]+'%,0)');
+                             }                        
+                        }, 4000);
+                })
+            </script>
+
             <div class="owl-carousel testimonial-thumb mt-4 mt-sm-5 slick-initialized slick-slider slick-dotted"
                 style="height:190px;">
                 <div class="slick-list draggable">
@@ -1520,6 +1660,7 @@
                                 tabindex="0" aria-selected="true">1</button></li>
                     </ul> -->
             </div>
+            <!-- HTML Structure -->
             <div class="d-lg-none text-center mt-4 mt-sm-5"> <a href="https://bit.ly/4c6iqqQ" target="_blank"
                     class="readmore-outline" title="View-All-Reviews">View All Reviews</a> </div>
         </div>
@@ -1576,48 +1717,18 @@
                         <h2>Videos Testimonial</h2>
                     </div>
                     <div class="slick-- video-slider slick-initialized slick-slider slick-dotted">
-                        <!-- Item Start Here -->
-                        <div class="slick-list draggable">
-                            <div class="slick-track"
-                                style="opacity: 1; width: 2996px; transform: translate3d(-856px, 0px, 0px); transition: transform 300ms;">
-                                <div class="item slick-slide slick-cloned" data-slick-index="-1" id=""
-                                    aria-hidden="true" style="width: 428px;" tabindex="-1">
-                                    <div class="video-bx">
-                                    </div>
-                                </div>
-                                <div class="item slick-slide" data-slick-index="0" aria-hidden="true"
-                                    style="width: 428px;" tabindex="0" role="tabpanel" id="slick-slide20"
-                                    aria-describedby="slick-slide-control20">
-                                    <div class="video-bx">
-                                    </div>
-                                </div>
-                                <div class="item slick-slide slick-current slick-active" data-slick-index="1"
-                                    aria-hidden="false" style="width: 428px;" tabindex="-1" role="tabpanel"
-                                    id="slick-slide21" aria-describedby="slick-slide-control21">
-                                    <div class="video-bx">
-                                        <div class="vaidam_yt_video_block home-page-video-block click-to-play-video know-work"
-                                            id="player-sxuj3GMvFCs">
-                                            <img loading="lazy"
-                                                class="img-responsive video-icon-block video-block-imgages"
-                                                src="https://www.vaidam.com/sites/all/themes/vaidam/v0/dist/img/video-icon.png"
-                                                width="70" height="55" alt="Play Video" title="Videos">
-                                            <img loading="lazy"
-                                                class="img-responsive video-image home-page-footer-video-image footer-home-images lazy_img"
-                                                id="sxuj3GMvFCs"
-                                                src="https://img.youtube.com/vi/sxuj3GMvFCs/mqdefault.jpg" width="263"
-                                                height="148"
-                                                alt="Happy Patient from Vanuatu I Pacemaker Implantation Treatment in India"
-                                                title="YouTube link">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> <!-- Item End Here -->
-                        <!-- <ul class="slick-dots" style="" role="tablist">
-                                <li class="" role="presentation"><button type="button" role="tab" id="slick-slide-control20" aria-controls="slick-slide20" aria-label="1 of 3" tabindex="0" aria-selected="true">1</button></li>
-                                <li role="presentation" class="slick-active"><button type="button" role="tab" id="slick-slide-control21" aria-controls="slick-slide21" aria-label="2 of 3" tabindex="-1">2</button></li>
-                                <li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control22" aria-controls="slick-slide22" aria-label="3 of 3" tabindex="-1">3</button></li>
-                            </ul> -->
+                       <div class="video-bx">
+                          <div class="vaidam_yt_video_block home-page-video-block click-to-play-video know-work"
+                            id="player-Cxg6xPmSFFU" onclick="playYouTubeVideo(this)"> <img loading="lazy"
+                                class="img-responsive video-icon-block video-block-imgages"
+                                src="https://www.vaidam.com/sites/all/themes/vaidam/v0/dist/img/video-icon.png"
+                                width="70" height="55" alt="Play Video" title="Play Video"> 
+                                <img loading="lazy"
+                                class="img-responsive video-image home-page-footer-video-image footer-home-images lazy_img"
+                                id="Cxg6xPmSFFU" src="https://img.youtube.com/vi/Cxg6xPmSFFU/mqdefault.jpg" style="width:100%;height:100%;" alt="YouTube" title="YouTube Video">
+                             <p class="text-center play-video-tag">Play Video</p>
+                         </div>
+                       </div>
                     </div>
                 </div>
             </div>
@@ -1679,143 +1790,117 @@
                             </div>
                         </div>
                     </div> -->
-                    <div class="slick-- event-slider slick-initialized slick-slider slick-dotted">
-                        <div class="slick-list draggable">
-                            <div class="slick-track"
-                                style="opacity: 1; width: 4212px; transform: translate3d(-936px, 0px, 0px);">
-                                <div class="item slick-slide slick-cloned" data-slick-index="-1" id=""
-                                    aria-hidden="true" style="width: 468px;" tabindex="-1">
-                                    <div class="event_bx">
-                                        <figure><img loading="lazy"
-                                                src="<?php echo base_url('assets/img/') .'nabh-386.jpg'?>"
-                                                alt="NABH" class="img-fluid" title="NABH image"></figure>
-                                    </div>
-                                </div>
-                                <div class="item slick-slide" data-slick-index="0" aria-hidden="true"
-                                    style="width: 468px;" tabindex="-1" role="tabpanel" id="slick-slide30"
-                                    aria-describedby="slick-slide-control30">
-                                    <div class="event_bx"> <a
-                                            href="https://www.vaidam.com/event/apollo-fertility-center-at-ethiopia-24th-and-25th-january-2025"
-                                            title="Apollo Fertility Center at Ethiopia 24th and 25th january 2025"
-                                            tabindex="-1">
-                                            <figure><img loading="lazy"
-                                                    src="<?php echo base_url('assets/img/') .'ethiopia-website-banner-January-2025.jpg'?>"
-                                                    alt="Apollo Fertility Center at Ethiopia 24th and 25th january 2025"
-                                                    class="img-fluid" title="Ethiopia Image"></figure>
-                                        </a> </div>
-                                </div>
-                                <div class="item slick-slide slick-current slick-active" data-slick-index="1"
-                                    aria-hidden="false" style="width: 468px;" tabindex="0" role="tabpanel"
-                                    id="slick-slide31" aria-describedby="slick-slide-control31">
-                                    <div class="event_bx">
-                                        <!-- <a href="https://www.vaidam.com/event/shalby-hospital-at-kyrgyzstan-25th-and-26th-november-2024"> -->
-                                        <figure><img loading="lazy"
-                                                src="<?php echo base_url('assets/img/') .'successful_camp_Zambia-09-12-24.jpg'?>"
-                                                alt="Successful Camp Zambia" class="img-fluid"
-                                                title="Successful Camp Zambia"></figure> <!-- </a> -->
-                                    </div>
-                                </div>
-                                <div class="item slick-slide" data-slick-index="2" aria-hidden="true"
-                                    style="width: 468px;" tabindex="-1" role="tabpanel" id="slick-slide32"
-                                    aria-describedby="slick-slide-control32">
-                                    <div class="event_bx"> <a href="https://www.vaidam.com/videos/patient-testimonials"
-                                            title="Fiji Happy Patient" tabindex="-1">
-                                            <figure><img loading="lazy"
-                                                    src="<?php echo base_url('assets/img/') .'fiji-happy-patient-386.png'?>"
-                                                    alt="Fiji Happy Patient" class="img-fluid"
-                                                    title="Fiji Happy Patient image"></figure>
-                                        </a> </div>
-                                </div>
-                                <div class="item slick-slide" data-slick-index="3" aria-hidden="true"
-                                    style="width: 468px;" tabindex="-1" role="tabpanel" id="slick-slide33"
-                                    aria-describedby="slick-slide-control33">
-                                    <div class="event_bx">
-                                        <figure><img loading="lazy"
-                                                src="<?php echo base_url('assets/img/') .'nabh-386.jpg'?>"
-                                                alt="NABH" class="img-fluid" title="NABH image"></figure>
-                                    </div>
-                                </div>
-                                <div class="item slick-slide slick-cloned" data-slick-index="4" id="" aria-hidden="true"
-                                    style="width: 468px;" tabindex="-1">
-                                    <div class="event_bx"> <a
-                                            href="https://www.vaidam.com/event/apollo-fertility-center-at-ethiopia-24th-and-25th-january-2025"
-                                            title="Apollo Fertility Center at Ethiopia 24th and 25th january 2025"
-                                            tabindex="-1">
-                                            <figure><img loading="lazy"
-                                                    src="<?php echo base_url('assets/img/') .'ethiopia-website-banner-January-2025.jpg'?>"
-                                                    alt="Apollo Fertility Center at Ethiopia 24th and 25th january 2025"
-                                                    class="img-fluid" title="Ethiopia Image"></figure>
-                                        </a> </div>
-                                </div>
-                                <div class="item slick-slide slick-cloned" data-slick-index="5" id="" aria-hidden="true"
-                                    style="width: 468px;" tabindex="-1">
-                                    <div class="event_bx">
-                                        <!-- <a href="https://www.vaidam.com/event/shalby-hospital-at-kyrgyzstan-25th-and-26th-november-2024"> -->
-                                        <figure><img loading="lazy"
-                                                src="<?php echo base_url('assets/img/') .'successful_camp_Zambia-09-12-24.jpg'?>"
-                                                alt="Successful Camp Zambia" class="img-fluid"
-                                                title="Successful Camp Zambia"></figure> <!-- </a> -->
-                                    </div>
-                                </div>
-                                <div class="item slick-slide slick-cloned" data-slick-index="6" id="" aria-hidden="true"
-                                    style="width: 468px;" tabindex="-1">
-                                    <div class="event_bx"> <a href="https://www.vaidam.com/videos/patient-testimonials"
-                                            title="Fiji Happy Patient" tabindex="-1">
-                                            <figure><img loading="lazy"
-                                                    src="<?php echo base_url('assets/img/') .'fiji-happy-patient-386.png'?>"
-                                                    alt="Fiji Happy Patient" class="img-fluid"
-                                                    title="Fiji Happy Patient image"></figure>
-                                        </a> </div>
-                                </div>
-                                <div class="item slick-slide slick-cloned" data-slick-index="7" id="" aria-hidden="true"
-                                    style="width: 468px;" tabindex="-1">
-                                    <div class="event_bx">
-                                        <figure><img loading="lazy"
-                                                src="<?php echo base_url('assets/img/') .'nabh-386.jpg'?>"
-                                                alt="NABH" class="img-fluid" title="NABH image"></figure>
-                                    </div>
-                                </div>
-                            </div>
+                    <div id="updates-body">
+                     <div class="carousel-1">
+                        <div class="carousel-item-1" id="item-1">
+                        <img loading="lazy" src=<?php echo base_url('assets/img/') . "women-icon-black.webp" ?>
+                        alt="Women Icon" style="width: 100%;height:100%;">
                         </div>
-                        <!-- <div class="item"> <div class="event_bx"> <a href="https://www.vaidam.com/event/shalby-hospital-at-kyrgyzstan-25th-and-26th-november-2024"> <figure><img loading="lazy" src="https://d3lclm53tbcdw6.cloudfront.net/v2/images/banner/Kyrgystan_website_banner.jpg" alt="Kyrgystan camp" class="img-fluid" title="Kyrgyzstan camp image"></figure> </a> </div> </div> -->
-                        <!-- Item End Here -->
-                        <!-- <ul class="slick-dots" style="" role="tablist">
-                            <li class="" role="presentation"><button type="button" role="tab" id="slick-slide-control30"
-                                    aria-controls="slick-slide30" aria-label="1 of 4" tabindex="-1">1</button></li>
-                            <li role="presentation" class="slick-active"><button type="button" role="tab"
-                                    id="slick-slide-control31" aria-controls="slick-slide31" aria-label="2 of 4"
-                                    tabindex="0" aria-selected="true">2</button></li>
-                            <li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control32"
-                                    aria-controls="slick-slide32" aria-label="3 of 4" tabindex="-1">3</button></li>
-                            <li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control33"
-                                    aria-controls="slick-slide33" aria-label="4 of 4" tabindex="-1">4</button></li>
-                        </ul> -->
-                    </div>
+                        <div class="carousel-item-1" id="item-2">
+                        <img loading="lazy" src=<?php echo base_url('assets/img/') . "women-icon-black.webp" ?>
+                        alt="Women Icon" style="width: 100%;height:100%;">
+                        </div>
+                        <div class="carousel-item-1" id="item-3">
+                        <img loading="lazy" src=<?php echo base_url('assets/img/') . "women-icon-black.webp" ?>
+                        alt="Women Icon" style="width: 100%;height:100%;">
+                        </div>
+                        <div id="dots-1">
+                            <div class="dot-1 active" id="dot-1-1"></div>
+                            <div class="dot-1" id="dot-1-2"></div>
+                            <div class="dot-1" id="dot-1-3"></div>
+                        </div>
+                     </div>
+                    <style>
+                        .carousel-1 {
+                            position: relative;
+                            width: 100%;
+                            height: 95%;
+                            overflow: hidden;
+                            margin:0 auto;
+                            font-size: 15px;
+                            background-color: aliceblue;
+                        }
+
+                        .carousel-item-1 {
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            padding:50px;
+                            text-align: center;
+                            padding:50px 100px 50px 100px;
+                            transition: transform 0.5s ease-in-out;
+                        }
+
+                        #item-1 {
+                            transform: translate(0, 0);
+                        }
+
+                        #item-2 {
+                            transform: translate(100%, 0);
+                        }
+
+                        #item-3 {
+                            transform: translate(200%, 0);
+                        }
+
+                        #dots-1 {
+                        display: flex; 
+                        justify-content: center; 
+                        margin-top: 20px;
+                        position: absolute;
+                        bottom: 0;
+                        left: 40%;
+                        }
+
+                        .dot-1 {
+                        width: 12px; 
+                        height: 12px;
+                        border-radius: 50%;
+                        background-color: #bbb;
+                        margin: 0 8px; 
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                        }
+
+                        .dot-1.active {
+                        background-color: #333; 
+                        }
+
+                        .dot-1:hover {
+                        background-color: #888; 
+                        }
+                    </style>
+
                     <script>
-                       $(document).ready(function(){
-                        if ($('.event-slider').hasClass('slick-initialized')) {
-                            if ($('.event-slider').length){
-                            $('.event-slider').slick({
-                                    dots: true,           // Enables the dot indicators
-                                    infinite: true,       // Enables infinite looping
-                                    speed: 300,           // Transition speed in ms
-                                    slidesToShow: 1,      // Number of slides visible at a time
-                                    slidesToScroll: 1,    // Number of slides to scroll per action
-                                    autoplay: true,       // Enables auto-sliding
-                                    autoplaySpeed: 3000,  // Time interval for auto-sliding
-                                    arrows: true,   
-                                    accessibility: false,      // Show previous/next arrows
-                                    responsive: [
-                                    {
-                                        breakpoint: 768,
-                                        settings: {
-                                        slidesToShow: 1
-                                        }
+                        $(document).ready(function(){
+                            let len=$('.carousel-item-1').length;
+                            let arr=[];
+                            for(let i=0;i<len;i++){
+                                arr.push(i*100);
+                            }
+                            let active_dot_ind=1;
+                            setInterval(function(){  
+                                    arr=arr.map(item => item-100)  
+                                    $('.carousel-item-1').each(function(index){      
+                                        $(this).css('transform','translate('+arr[index]+'%,0)');   
+                                    });  
+                                    $(`#dot-1-${active_dot_ind}`).removeClass('active');
+                                    active_dot_ind++;
+                                    if(active_dot_ind>len){
+                                        active_dot_ind=1;
                                     }
-                                    ]
-                                });
-                                }});   
-                        </script>
+                                    $(`#dot-1-${active_dot_ind}`).addClass('active');
+                                    if(arr[0]==-200){
+                                        arr.shift();
+                                        arr.push(arr[arr.length-1]+100);
+                                        $('.carousel-1>.carousel-item-1:first').clone(true).appendTo('.carousel-1');
+                                        $('.carousel-1>.carousel-item-1:first').remove();
+                                        $('.carousel-1>.carousel-item-1:last').css('transform','translate('+arr[arr.length-1]+'%,0)');
+                                    }                        
+                                }, 4000);
+                        })
+                    </script>
+                    </div>
                 </div>
                 <div class="col-lg-8 col-md-7">
                     <div
@@ -1838,7 +1923,7 @@
                               </div>';
                         }
                         ?>
-                        <div class="col-12 mt-4 pt-3 text-center"> <a href="https://www.vaidam.com/knowledge-center"
+                        <div class="col-12 mt-4 pt-3 text-center"> <a href="<?php echo base_url("blogs") ?>"
                                 target="_blank" title="Blogs" class="readmore-outline">View All Blogs</a> </div>
                     </div>
                 </div>
@@ -1864,7 +1949,7 @@
                                    alt="Vaidam In News" class="img-fluid" title="Vaidam In news" style="height:170px;"></figure>
                                 <div class="card-body news-card-body">
                                    <a class="card-link"
-                                      href="https://www.vaidam.com/knowledge-center/news/vaidam-health-gets-covered-medical-travel-today-authoritative-newsletter-medical"
+                                      href="'.base_url("news/index/").$n["id"].'"
                                       title="' . $n["title"] . '" tabindex="0">
                                       <p class="card-text news-card-text text-dark">' . $n["topic"] . '
                                       </p>
@@ -1876,11 +1961,6 @@
                         ?>
                     </div>
                 </div>
-                <!-- <ul class="slick-dots" role="tablist">
-                        <li class="slick-active" role="presentation"><button type="button" role="tab"
-                                id="slick-slide-control40" aria-controls="slick-slide40" aria-label="1 of 1"
-                                tabindex="0" aria-selected="true">1</button></li>
-                    </ul> -->
             </div>
         </div>
     </section>
@@ -1891,7 +1971,9 @@
             </div>
             <div class="row accordion custom-accordion gy-3 gy-lg-0" id="faqaccord">
                 <div class="col-lg-6">
-                    <div class="accordion-item"> <button class="accordion-button collapsed" type="button"
+                   
+                    <div class="accordion-item">
+                         <button class="accordion-button collapsed" type="button"
                             data-bs-toggle="collapse" data-bs-target="#faq02" aria-expanded="false">
                             <h3 class="fs-6 my-0">What is medical tourism, and why do people travel abroad for medical
                                 treatments?</h3>
@@ -1910,7 +1992,7 @@
                                     <li>Better expertise abroad - A lot of patients have doctors available in their home
                                         country but unfortunately the infrastructure, latest equipments and experience
                                         of the doctors is so limited that patients don't want to risk their life and opt
-                                        to travel abroad. </li>
+                                     to travel abroad. </li>
                                     <li>Affordable care - Many patients (uninsured in their home country) have expertise
                                         and healthcare available but the cost is prohibitive for getting treated locally
                                         and they save a lot of money (even after adding travel and stay expenses) by
@@ -1926,6 +2008,7 @@
                             </div>
                         </div>
                     </div>
+                  
                     <div class="accordion-item"> <button class="accordion-button collapsed" type="button"
                             data-bs-toggle="collapse" data-bs-target="#faq03" aria-expanded="false">
                             <h3 class="fs-6 my-0">What is Vaidam.com, and how does it work?</h3>
@@ -2707,12 +2790,14 @@
 <div id="menu-bottom" class="bottom-menu"> <a
         onclick="if (!window.__cfRLUnblockHandlers) return false; setformtype('','','enquiry sticky button','','home page','','');"
         href="https://www.vaidam.com/lp/consult-online" class="readmore-outline me-2" title="Need-Help">Need Help?</a>
-    <a href="https://api.whatsapp.com/send?phone=919971616131&amp;text=Hello,%20please%20contact%20me%20regarding%20https://www.vaidam.com?source=wpchat_HPSB,%20Thank%20you!"
+    <a href="#"
         title="Whatsapp Chat" class="readmore whatsapp-color wa_button_clicked"><img loading="lazy"
             src="https://d3lclm53tbcdw6.cloudfront.net/v2/new-home/images/whatsaap-icon01.webp" alt="Chat with Us"
-            width="30" height="29" class="img-fluid me-1" title="Chat with Us banner"> Chat</a> </div>
+            width="30" height="29" class="img-fluid me-1" title="Chat with Us banner"> Chat</a>
+</div>
 <div class="scroll-top-wrapper transition"> <span class="scroll-top-inner transition"> <span
             style="font-size:36px; color:#fff;">↑</span> </span> </div> <!-- Model Starts Here -->
+
 <div class="modal fade custom-modal treatmentsModal" id="treatmentModalOncology" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -2749,9 +2834,9 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="indiaOncology" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/oncology-and-oncosurgery/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/oncology-and-oncosurgery' ?>"
                                         title="Best Cancer Doctors in India">Best Cancer Doctors in India</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/oncology-and-oncosurgery/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/oncology-and-oncosurgery' ?>"
                                         title="Best Cancer Hospitals In India">Best Cancer Hospitals In India</a></li>
                                 <li><a href="https://www.vaidam.com/search/cancer/india"
                                         title="Cancer Treatment Cost in India">Cancer Treatment Cost in India</a></li>
@@ -2759,9 +2844,9 @@
                         </div>
                         <div class="tab-pane fade" id="turkeyOncology" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/oncology-and-oncosurgery/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/oncology-and-oncosurgery' ?>"
                                         title="Best Cancer Doctors in Turkey">Best Cancer Doctors in Turkey</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/oncology-and-oncosurgery/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/oncology-and-oncosurgery' ?>"
                                         title="Best Cancer Hospitals In Turkey">Best Cancer Hospitals In Turkey</a></li>
                                 <li><a href="https://www.vaidam.com/search/cancer/turkey"
                                         title="Cancer Treatment Cost in Turkey">Cancer Treatment Cost in Turkey</a></li>
@@ -2769,9 +2854,9 @@
                         </div>
                         <div class="tab-pane fade" id="thailandOncology" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/oncology-and-oncosurgery/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/oncology-and-oncosurgery' ?>"
                                         title="Best Cancer Doctors in Thailand">Best Cancer Doctors in Thailand</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/oncology-and-oncosurgery/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/oncology-and-oncosurgery' ?>"
                                         title="Best Cancer Hospitals In Thailand">Best Cancer Hospitals In Thailand</a>
                                 </li>
                                 <li><a href="https://www.vaidam.com/search/cancer/thailand"
@@ -2781,17 +2866,17 @@
                         </div>
                         <div class="tab-pane fade" id="uaeOncology" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/oncology-and-oncosurgery/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/oncology-and-oncosurgery' ?>"
                                         title="Best Cancer Doctors in UAE">Best Cancer Doctors in UAE</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/oncology-and-oncosurgery/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/oncology-and-oncosurgery' ?>"
                                         title="Best Cancer Hospitals In UAE">Best Cancer Hospitals In UAE</a></li>
                             </ul>
                         </div>
                         <div class="tab-pane fade" id="germanyOncology" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/oncology-and-oncosurgery/germany"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'germany/oncology-and-oncosurgery' ?>"
                                         title="Best Cancer Doctors in Germany">Best Cancer Doctors in Germany</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/oncology-and-oncosurgery/germany"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'germany/oncology-and-oncosurgery' ?>"
                                         title="Best Cancer Hospitals In Germany">Best Cancer Hospitals In Germany</a>
                                 </li>
                             </ul>
@@ -2838,9 +2923,9 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="indiaNeurosurgery" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/neurosurgery/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/neurosurgery' ?>"
                                         title="Best Neurosurgeons in India">Best Neurosurgeons in India</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/neurosurgery/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/neurosurgery' ?>"
                                         title="Best Neurosurgery Hospitals In India">Best Neurosurgery Hospitals In
                                         India</a></li>
                                 <li><a href="https://www.vaidam.com/search/neurosurgery/india"
@@ -2849,9 +2934,9 @@
                         </div>
                         <div class="tab-pane fade" id="turkeyNeurosurgery" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/neurosurgery/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/neurosurgery' ?>"
                                         title="Best Neurosurgeons in Turkey">Best Neurosurgeons in Turkey</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/neurosurgery/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/neurosurgery' ?>"
                                         title="Best Neurosurgery Hospitals In Turkey">Best Neurosurgery Hospitals In
                                         Turkey</a></li>
                                 <li><a href="https://www.vaidam.com/search/neurosurgery/turkey"
@@ -2860,9 +2945,9 @@
                         </div>
                         <div class="tab-pane fade" id="thailandNeurosurgery" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/neurosurgery/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/neurosurgery' ?>"
                                         title="Best Neurosurgeons in Thailand">Best Neurosurgeons in Thailand</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/neurosurgery/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/neurosurgery' ?>"
                                         title="Best Neurosurgery Hospitals In Thailand">Best Neurosurgery Hospitals In
                                         Thailand</a></li>
                                 <li><a href="https://www.vaidam.com/search/neurosurgery/thailand"
@@ -2871,18 +2956,18 @@
                         </div>
                         <div class="tab-pane fade" id="uaeNeurosurgery" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/neurosurgery/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/neurosurgery' ?>"
                                         title="Best Neurosurgeons in UAE">Best Neurosurgeons in UAE</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/neurosurgery/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/neurosurgery' ?>"
                                         title="Best Neurosurgery Hospitals In UAE">Best Neurosurgery Hospitals In
                                         UAE</a></li>
                             </ul>
                         </div>
                         <div class="tab-pane fade" id="germanyNeurosurgery" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/neurosurgery/germany"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'germany/neurosurgery' ?>"
                                         title="Best Neurosurgeons in Germany">Best Neurosurgeons in Germany</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/neurosurgery/germany"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'germany/neurosurgery' ?>"
                                         title="Best Neurosurgery Hospitals In Germany">Best Neurosurgery Hospitals In
                                         Germany</a></li>
                             </ul>
@@ -2925,9 +3010,9 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="indiaSpine-Surgery" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/spine-surgery/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/spine-surgery' ?>"
                                         title="Best Spine Surgeons in India">Best Spine Surgeons in India</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/spine-surgery/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/spine-surgery' ?>"
                                         title="Best Spine Hospitals In India">Best Spine Hospitals In India</a></li>
                                 <li><a href="https://www.vaidam.com/search/spine-surgery/india"
                                         title="Spine Surgery Cost in India">Spine Surgery Cost in India</a></li>
@@ -2935,9 +3020,9 @@
                         </div>
                         <div class="tab-pane fade" id="turkeySpine-Surgery" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/spine-surgery/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/spine-surgery' ?>"
                                         title="Best Spine Surgeons in Turkey">Best Spine Surgeons in Turkey</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/spine-surgery/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/spine-surgery' ?>"
                                         title="Best Spine Hospitals In Turkey">Best Spine Hospitals In Turkey</a></li>
                                 <li><a href="https://www.vaidam.com/search/spine-surgery/turkey"
                                         title="Spine Surgery Cost in Turkey">Spine Surgery Cost in Turkey</a></li>
@@ -2945,9 +3030,9 @@
                         </div>
                         <div class="tab-pane fade" id="thailandSpine-Surgery" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/spine-surgery/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/spine-surgery' ?>"
                                         title="Best Spine Surgeons in Thailand">Best Spine Surgeons in Thailand</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/spine-surgery/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/spine-surgery' ?>"
                                         title="Best Spine Hospitals In Thailand">Best Spine Hospitals In Thailand</a>
                                 </li>
                                 <li><a href="https://www.vaidam.com/search/spine-surgery/thailand"
@@ -2956,9 +3041,9 @@
                         </div>
                         <div class="tab-pane fade" id="uaeSpine-Surgery" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/spine-surgery/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/spine-surgery' ?>"
                                         title="Best Spine Surgeons in UAE">Best Spine Surgeons in UAE</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/spine-surgery/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/spine-surgery' ?>"
                                         title="Best Spine Hospitals In UAE">Best Spine Hospitals In UAE</a></li>
                             </ul>
                         </div>
@@ -3000,9 +3085,9 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="indiaCardiology" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/cardiology-and-cardiac-surgery/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/cardiology-and-cardiac-surgery' ?>"
                                         title="Best Cardiac Surgeons in India">Best Cardiac Surgeons in India</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/cardiology-and-cardiac-surgery/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/cardiology-and-cardiac-surgery' ?>"
                                         title="Best Cardiac Hospitals In India">Best Cardiac Hospitals In India</a></li>
                                 <li><a href="https://www.vaidam.com/search/heart-surgery/india"
                                         title="Heart Surgery Cost in India">Heart Surgery Cost in India</a></li>
@@ -3010,9 +3095,9 @@
                         </div>
                         <div class="tab-pane fade" id="turkeyCardiology" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/cardiology-and-cardiac-surgery/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/cardiology-and-cardiac-surgery' ?>"
                                         title="Best Cardiac Surgeons in Turkey">Best Cardiac Surgeons in Turkey</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/cardiology-and-cardiac-surgery/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/cardiology-and-cardiac-surgery' ?>"
                                         title="Best Cardiac Hospitals In Turkey">Best Cardiac Hospitals In Turkey</a>
                                 </li>
                                 <li><a href="https://www.vaidam.com/search/heart-surgery/turkey"
@@ -3021,10 +3106,10 @@
                         </div>
                         <div class="tab-pane fade" id="thailandCardiology" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/cardiology-and-cardiac-surgery/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/cardiology-and-cardiac-surgery' ?>"
                                         title="Best Cardiac Surgeons in Thailand">Best Cardiac Surgeons in Thailand</a>
                                 </li>
-                                <li><a href="https://www.vaidam.com/hospitals/cardiology-and-cardiac-surgery/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/cardiology-and-cardiac-surgery' ?>"
                                         title="Best Cardiac Hospitals In Thailand">Best Cardiac Hospitals In
                                         Thailand</a></li>
                                 <li><a href="https://www.vaidam.com/search/heart-surgery/thailand"
@@ -3033,9 +3118,9 @@
                         </div>
                         <div class="tab-pane fade" id="uaeCardiology" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/cardiology-and-cardiac-surgery/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/cardiology-and-cardiac-surgery' ?>"
                                         title="Best Cardiac Surgeons in UAE">Best Cardiac Surgeons in UAE</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/cardiology-and-cardiac-surgery/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/cardiology-and-cardiac-surgery' ?>"
                                         title="Best Cardiac Hospitals In UAE">Best Cardiac Hospitals In UAE</a></li>
                             </ul>
                         </div>
@@ -3077,10 +3162,10 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="indiaOrthopedics" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/orthopedics/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/orthopedics' ?>"
                                         title="Best Orthopedic Doctors in India">Best Orthopedic Doctors in India</a>
                                 </li>
-                                <li><a href="https://www.vaidam.com/hospitals/orthopedics/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/orthopedics' ?>"
                                         title="Best Orthopedic Hospitals In India">Best Orthopedic Hospitals In
                                         India</a></li>
                                 <li><a href="https://www.vaidam.com/search/orthopedic-surgery/india"
@@ -3090,10 +3175,10 @@
                         </div>
                         <div class="tab-pane fade" id="turkeyOrthopedics" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/orthopedics/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/orthopedics' ?>"
                                         title="Best Orthopedic Doctors in Turkey">Best Orthopedic Doctors in Turkey</a>
                                 </li>
-                                <li><a href="https://www.vaidam.com/hospitals/orthopedics/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/orthopedics' ?>"
                                         title="Best Orthopedic Hospitals In Turkey">Best Orthopedic Hospitals In
                                         Turkey</a></li>
                                 <li><a href="https://www.vaidam.com/search/orthopedic-surgery/turkey"
@@ -3103,10 +3188,10 @@
                         </div>
                         <div class="tab-pane fade" id="thailandOrthopedics" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/orthopedics/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/orthopedics' ?>"
                                         title="Best Orthopedic Doctors in Thailand">Best Orthopedic Doctors in
                                         Thailand</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/orthopedics/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/orthopedics' ?>"
                                         title="Best Orthopedic Hospitals in Thailand">Best Orthopedic Hospitals in
                                         Thailand</a></li>
                                 <li><a href="https://www.vaidam.com/search/orthopedic-surgery/thailand"
@@ -3116,9 +3201,9 @@
                         </div>
                         <div class="tab-pane fade" id="uaeOrthopedics" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/orthopedics/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/orthopedics' ?>"
                                         title="Best Orthopedic Doctors in UAE">Best Orthopedic Doctors in UAE</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/orthopedics/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/orthopedics' ?>"
                                         title="Best Orthopedic Hospitals in UAE">Best Orthopedic Hospitals in UAE</a>
                                 </li>
                             </ul>
@@ -3161,9 +3246,9 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="indiaIVF" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/ivf-and-infertility/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/ivf-and-infertility' ?>"
                                         title="IVF Doctors in India">IVF Doctors in India</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/ivf-and-infertility/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/ivf-and-infertility' ?>"
                                         title="IVF Centers In India">IVF Centers In India</a></li>
                                 <li><a href="https://www.vaidam.com/search/ivf/india"
                                         title="IVF Treatment Cost in India">IVF Treatment Cost in India</a></li>
@@ -3171,9 +3256,9 @@
                         </div>
                         <div class="tab-pane fade" id="turkeyIVF" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/ivf-and-infertility/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/ivf-and-infertility' ?>"
                                         title="IVF Doctors in Turkey">IVF Doctors in Turkey</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/ivf-and-infertility/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/ivf-and-infertility' ?>"
                                         title="IVF Centers In Turkey">IVF Centers In Turkey</a></li>
                                 <li><a href="https://www.vaidam.com/search/ivf/turkey"
                                         title="IVF Treatment Cost in Turkey">IVF Treatment Cost in Turkey</a></li>
@@ -3181,9 +3266,9 @@
                         </div>
                         <div class="tab-pane fade" id="thailandIVF" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/ivf-and-infertility/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/ivf-and-infertility' ?>"
                                         title="IVF Doctors in Thailand">IVF Doctors in Thailand</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/ivf-and-infertility/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/ivf-and-infertility' ?>"
                                         title="IVF Centers In Thailand">IVF Centers In Thailand</a></li>
                                 <li><a href="https://www.vaidam.com/search/ivf/thailand"
                                         title="IVF Treatment Cost in Thailand">IVF Treatment Cost in Thailand</a></li>
@@ -3191,9 +3276,9 @@
                         </div>
                         <div class="tab-pane fade" id="uaeIVF" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/ivf-and-infertility/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/ivf-and-infertility' ?>"
                                         title="IVF Doctors in UAE">IVF Doctors in UAE</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/ivf-and-infertility/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/ivf-and-infertility' ?>"
                                         title="IVF Centers In UAE">IVF Centers In UAE</a></li>
                                 <li><a href="https://www.vaidam.com/search/ivf/united-arab-emirates"
                                         title="IVF Treatment Cost in UAE">IVF Treatment Cost in UAE</a></li>
@@ -3237,9 +3322,9 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="indiaGynecology" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/gynecology/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/gynecology' ?>"
                                         title="Best Gynecologist in India">Best Gynecologist in India</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/gynecology/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/gynecology' ?>"
                                         title="Best Gynecology Hospitals In India">Best Gynecology Hospitals In
                                         India</a></li>
                                 <li><a href="https://www.vaidam.com/search/gynecological-surgery/india"
@@ -3249,9 +3334,9 @@
                         </div>
                         <div class="tab-pane fade" id="turkeyGynecology" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/gynecology/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/gynecology' ?>"
                                         title="Best Gynecologist in Turkey">Best Gynecologist in Turkey</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/gynecology/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/gynecology' ?>"
                                         title="Best Gynecology Hospitals In Turkey">Best Gynecology Hospitals In
                                         Turkey</a></li>
                                 <li><a href="https://www.vaidam.com/search/gynecological-surgery/turkey"
@@ -3261,9 +3346,9 @@
                         </div>
                         <div class="tab-pane fade" id="thailandGynecology" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/gynecology/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/gynecology' ?>"
                                         title="Best Gynecologist in Thailand">Best Gynecologist in Thailand</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/gynecology/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/gynecology' ?>"
                                         title="Best Gynecology Hospitals In Thailand">Best Gynecology Hospitals In
                                         Thailand</a></li>
                                 <li><a href="https://www.vaidam.com/search/gynecological-surgery/thailand"
@@ -3273,9 +3358,9 @@
                         </div>
                         <div class="tab-pane fade" id="uaeGynecology" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/gynecology/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/gynecology' ?>"
                                         title="Best Gynecologist in UAE">Best Gynecologist in UAE</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/gynecology/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/gynecology' ?>"
                                         title="Best Gynecology Hospitals In UAE">Best Gynecology Hospitals In UAE</a>
                                 </li>
                             </ul>
@@ -3318,9 +3403,9 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="indiaCosmetic" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/cosmetic-and-plastic-surgery/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/cosmetic-and-plastic-surgery' ?>"
                                         title="Best Cosmetic Surgeons in India">Best Cosmetic Surgeons in India</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/cosmetic-and-plastic-surgery/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/cosmetic-and-plastic-surgery' ?>"
                                         title="Best Cosmetic Hospitals In India">Best Cosmetic Hospitals In India</a>
                                 </li>
                                 <li><a href="https://www.vaidam.com/search/cosmetic/india"
@@ -3329,10 +3414,10 @@
                         </div>
                         <div class="tab-pane fade" id="turkeyCosmetic" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/cosmetic-and-plastic-surgery/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/cosmetic-and-plastic-surgery' ?>"
                                         title="Best Cosmetic Surgeons in Turkey">Best Cosmetic Surgeons in Turkey</a>
                                 </li>
-                                <li><a href="https://www.vaidam.com/hospitals/cosmetic-and-plastic-surgery/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/cosmetic-and-plastic-surgery' ?>"
                                         title="Best Cosmetic Hospitals In Turkey">Best Cosmetic Hospitals In Turkey</a>
                                 </li>
                                 <li><a href="https://www.vaidam.com/search/cosmetic/turkey"
@@ -3341,10 +3426,10 @@
                         </div>
                         <div class="tab-pane fade" id="thailandCosmetic" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/cosmetic-and-plastic-surgery/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/cosmetic-and-plastic-surgery' ?>"
                                         title="Best Cosmetic Surgeons in Thailand">Best Cosmetic Surgeons in
                                         Thailand</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/cosmetic-and-plastic-surgery/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/cosmetic-and-plastic-surgery' ?>"
                                         title="Best Cosmetic Hospitals In Thailand">Best Cosmetic Hospitals In
                                         Thailand</a></li>
                                 <li><a href="https://www.vaidam.com/search/cosmetic/thailand"
@@ -3354,9 +3439,9 @@
                         </div>
                         <div class="tab-pane fade" id="uaeCosmetic" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/cosmetic-and-plastic-surgery/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/cosmetic-and-plastic-surgery' ?>"
                                         title="Best Cosmetic Surgeons in UAE">Best Cosmetic Surgeons in UAE</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/cosmetic-and-plastic-surgery/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/cosmetic-and-plastic-surgery' ?>"
                                         title="Best Cosmetic Hospitals In UAE">Best Cosmetic Hospitals In UAE</a></li>
                             </ul>
                         </div>
@@ -3398,10 +3483,10 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="indiaWeight-Loss" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/obesity-or-bariatric-surgery-0/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/obesity-or-bariatric-surgery-0' ?>"
                                         title="Best Bariatric Surgeons in India">Best Bariatric Surgeons in India</a>
                                 </li>
-                                <li><a href="https://www.vaidam.com/hospitals/obesity-or-bariatric-surgery-0/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/obesity-or-bariatric-surgery-0' ?>"
                                         title="Best Bariatric Surgery Hospitals In India">Best Bariatric Surgery
                                         Hospitals In India</a></li>
                                 <li><a href="https://www.vaidam.com/search/bariatric-surgery-for-weight-loss/india"
@@ -3410,10 +3495,10 @@
                         </div>
                         <div class="tab-pane fade" id="turkeyWeight-Loss" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/obesity-or-bariatric-surgery-0/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/obesity-or-bariatric-surgery-0' ?>"
                                         title="Best Bariatric Surgeons in Turkey">Best Bariatric Surgeons in Turkey</a>
                                 </li>
-                                <li><a href="https://www.vaidam.com/hospitals/obesity-or-bariatric-surgery-0/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/obesity-or-bariatric-surgery-0' ?>"
                                         title="Best Bariatric Surgery Hospitals In Turkey">Best Bariatric Surgery
                                         Hospitals In Turkey</a></li>
                                 <li><a href="https://www.vaidam.com/search/bariatric-surgery-for-weight-loss/turkey"
@@ -3423,10 +3508,10 @@
                         </div>
                         <div class="tab-pane fade" id="thailandWeight-Loss" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/obesity-or-bariatric-surgery-0/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/obesity-or-bariatric-surgery-0' ?>"
                                         title="Best Bariatric Surgeons in Thailand">Best Bariatric Surgeons in
                                         Thailand</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/obesity-or-bariatric-surgery-0/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/obesity-or-bariatric-surgery-0' ?>"
                                         title="Best Bariatric Surgery Hospitals In Thailand">Best Bariatric Surgery
                                         Hospitals In Thailand</a></li>
                                 <li><a href="https://www.vaidam.com/search/bariatric-surgery-for-weight-loss/thailand"
@@ -3436,9 +3521,9 @@
                         </div>
                         <div class="tab-pane fade" id="uaeWeight-Loss" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/obesity-or-bariatric-surgery-0/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/obesity-or-bariatric-surgery-0' ?>"
                                         title="Best Bariatric Surgeons in UAE">Best Bariatric Surgeons in UAE</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/obesity-or-bariatric-surgery-0/united-arab-emirates"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'united-arab-emirates/obesity-or-bariatric-surgery-0' ?>"
                                         title="Best Bariatric Surgery Hospitals In UAE">Best Bariatric Surgery Hospitals
                                         In UAE</a></li>
                                 <li><a href="https://www.vaidam.com/search/bariatric-surgery-for-weight-loss/united-arab-emirates"
@@ -3480,10 +3565,10 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="indiaLiver-Transplant" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/transplant-surgery/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/transplant-surgery' ?>"
                                         title="Best Liver Transplant Surgeons in India">Best Liver Transplant Surgeons
                                         in India</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/transplant-surgery/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/transplant-surgery' ?>"
                                         title="Best Liver Transplant Hospitals In India">Best Liver Transplant Hospitals
                                         In India</a></li>
                                 <li><a href="https://www.vaidam.com/search/liver-transplant/india"
@@ -3492,20 +3577,20 @@
                         </div>
                         <div class="tab-pane fade" id="turkeyLiver-Transplant" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/transplant-surgery/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/transplant-surgery' ?>"
                                         title="Best Liver Transplant Surgeons in Turkey">Best Liver Transplant Surgeons
                                         in Turkey</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/transplant-surgery/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/transplant-surgery' ?>"
                                         title="Best Liver Transplant Hospitals In Turkey">Best Liver Transplant
                                         Hospitals In Turkey</a></li>
                             </ul>
                         </div>
                         <div class="tab-pane fade" id="thailandLiver-Transplant" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/transplant-surgery/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/transplant-surgery' ?>"
                                         title="Best Liver Transplant Surgeons in Thailand">Best Liver Transplant
                                         Surgeons in Thailand</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/transplant-surgery/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/transplant-surgery' ?>"
                                         title="Best Liver Transplant Hospitals In Thailand">Best Liver Transplant
                                         Hospitals In Thailand</a></li>
                             </ul>
@@ -3545,10 +3630,10 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="indiaKidney-transplant" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/nephrology/kidney-transplant/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/nephrology/kidney-transplant' ?>"
                                         title="Best Kidney Transplant Surgeons in India">Best Kidney Transplant Surgeons
                                         in India</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/nephrology/kidney-transplant/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/nephrology/kidney-transplant' ?>"
                                         title="Best Kidney Transplant Hospitals In India">Best Kidney Transplant
                                         Hospitals In India</a></li>
                                 <li><a href="https://www.vaidam.com/search/kidney-transplant/india"
@@ -3557,20 +3642,20 @@
                         </div>
                         <div class="tab-pane fade" id="turkeyKidney-transplant" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/nephrology/kidney-transplant/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/nephrology/kidney-transplant' ?>"
                                         title="Best Kidney Transplant Surgeons in Turkey">Best Kidney Transplant
                                         Surgeons in Turkey</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/nephrology/kidney-transplant/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/nephrology/kidney-transplant' ?>"
                                         title="Best Kidney Transplant Hospitals In Turkey">Best Kidney Transplant
                                         Hospitals In Turkey</a></li>
                             </ul>
                         </div>
                         <div class="tab-pane fade" id="thailandKidney-transplant" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/nephrology/kidney-transplant/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/nephrology/kidney-transplant' ?>"
                                         title="Best Kidney Transplant Surgeons in Thailand">Best Kidney Transplant
                                         Surgeons in Thailand</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/nephrology/kidney-transplant/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/nephrology/kidney-transplant' ?>"
                                         title="Best Kidney Transplant Hospitals In Thailand">Best Kidney Transplant
                                         Hospitals In Thailand</a></li>
                             </ul>
@@ -3609,10 +3694,10 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="indiaBMT" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/hematology/bone-marrow-transplant/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/hematology/bone-marrow-transplant' ?>"
                                         title="Best Bone Marrow Transplant Doctors in India">Best Bone Marrow Transplant
                                         Doctors in India</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/hematology/bone-marrow-transplant/india"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'india/hematology/bone-marrow-transplant' ?>"
                                         title="Best Bone Marrow Transplant Hospitals In India">Best Bone Marrow
                                         Transplant Hospitals In India</a></li>
                                 <li><a href="https://www.vaidam.com/search/bmt-bone-marrow-transplant/india"
@@ -3622,17 +3707,17 @@
                         </div>
                         <div class="tab-pane fade" id="turkeyBMT" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/hematology/bone-marrow-transplant/turkey"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'turkey/hematology/bone-marrow-transplant' ?>"
                                         title="Best Bone Marrow Transplant Doctors in Turkey">Best Bone Marrow
                                         Transplant Doctors in Turkey</a></li>
                             </ul>
                         </div>
                         <div class="tab-pane fade" id="thailandBMT" role="tabpanel">
                             <ul>
-                                <li><a href="https://www.vaidam.com/doctors/hematology/bone-marrow-transplant/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/hematology/bone-marrow-transplant' ?>"
                                         title="Best Bone Marrow Transplant Doctors in Thailand">Best Bone Marrow
                                         Transplant Doctors in Thailand</a></li>
-                                <li><a href="https://www.vaidam.com/hospitals/hematology/bone-marrow-transplant/thailand"
+                                <li><a href="<?php echo base_url("hospitals/hospitals_country_dept/") . 'thailand/hematology/bone-marrow-transplant' ?>"
                                         title="Best Bone Marrow Transplant Hospitals In Thailand">Best Bone Marrow
                                         Transplant Hospitals In Thailand</a></li>
                             </ul>
@@ -3642,7 +3727,8 @@
             </div>
         </div>
     </div>
-</div> <!-- Models End here -->
+</div>
+
 <script type="text/javascript">
 
     $(".view-more-bx").slice(0, 2).show();
@@ -3652,7 +3738,7 @@
     $("#loadmorefaq").on("click", function (e) {
         e.preventDefault();
         if ($(".view-more-bx:hidden").length === 0) {
-            window.location = "https://www.vaidam.com/knowledge-center/patient-testimonials";
+            window.location = "http://localhost/sample/testimonials";
         }
         if ($(".view-more-bx:hidden").length > 0) {
             $(".view-more-bx:hidden").slice(0, 2).slideDown();
@@ -3662,8 +3748,107 @@
 <div id="menu-bottom" class="bottom-menu"> <a
         onclick="if (!window.__cfRLUnblockHandlers) return false; setformtype('','','enquiry sticky button','','Footer','','');"
         href="https://www.vaidam.com/lp/consult-online" class="readmore-outline me-2" title="Need Help">Need Help?</a>
-    <a href="https://api.whatsapp.com/send?phone=919971616131&amp;text=Hello,%20please%20contact%20me%20regarding%20http://www.vaidam.com/?source=,%20Thank%20you!"
+    <a href="#"
         title="Whatsapp Chat" class="readmore whatsapp-color"><img loading="lazy"
             src="https://d3lclm53tbcdw6.cloudfront.net/v2/new-home/images/whatsaap-icon01.webp" alt="Chat with Us"
-            title="Chat with Us" width="30" height="29" class="img-fluid me-1"> Chat</a> </div> <!--  -->
+            title="Chat with Us" width="30" height="29" class="img-fluid me-1"> Chat</a>
+</div> <!--  -->
 <script type="text/javascript" src="https://d3lclm53tbcdw6.cloudfront.net/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#genericForm').on('submit', function (e) {
+            e.preventDefault();
+
+            var formData = {
+                name: $('#name').val(),
+                email: $('#email').val(),
+                country: $('#country').val(),
+                city: $('#city').val(),
+                state: $('#state').val(),
+                country_phone_code: $('#country_phone_code').val(),
+                phone_number: $('#phone_number').val(),
+                medical_problem: $('#medical_problem').val(),
+                age: $('#age').val(),
+            };
+
+            $('#search-main-form-btn').prop('disabled', true).html('Sending...');
+
+            $.ajax({
+                url: '/sample/patients/post_details',
+                type: 'POST',
+                data: formData,
+                success: function (response) {
+                    if (response.success) {
+                        alert('Thank you! Your information has been submitted successfully.');
+                        $('#genericForm')[0].reset();
+                    } else {
+                        alert(response.message || 'Error submitting form. Please try again.');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert('An error occurred: ' + error);
+                },
+                complete: function () {
+                    $('#search-main-form-btn').prop('disabled', false).html('Get FREE Quote');
+                }
+            });
+        });
+
+        // Update phone code when country changes
+        $('#country').on('change', function () {
+            var countryCode = $(this).val();
+            var phoneCode = getPhoneCode(countryCode);
+            $('#country_phone_code').val(phoneCode);
+        });
+
+        // Function to get phone code (you need to implement this)
+        function getPhoneCode(countryCode) {
+            var phoneCodes = {
+                'US': '+1',
+                'GB': '+44',
+                'IN': '+91',
+                'AE': '+971'
+            };
+            return phoneCodes[countryCode] || '';
+        }
+
+
+        $('#genericForm_2').on('submit', function (e) {
+            e.preventDefault();
+
+            var formData = {
+                name: $('#name_2').val(),
+                email: $('#email_2').val(),
+                country: $('#country_2').val(),
+                city: $('#city_2').val(),
+                state: $('#state_2').val(),
+                country_phone_code: $('#country_phone_code_2').val(),
+                phone_number: $('#phone_number_2').val(),
+                medical_problem: $('#medical_problem_2').val(),
+                age: $('#age_2').val(),
+            };
+
+            $('.online-consult-button').prop('disabled', true).html('Submitting...');
+
+            $.ajax({
+                url: '/sample/patients/post_details',
+                type: 'POST',
+                data: formData,
+                success: function (response) {
+                    if (response.success) {
+                        alert('Thank you! Your information has been submitted successfully.');
+                        $('#genericForm_2')[0].reset();
+                    } else {
+                        alert(response.message || 'Error submitting form. Please try again.');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    alert('An error occurred: ' + error);
+                },
+                complete: function () {
+                    $('.online-consult-button').prop('disabled', false).html('Submit');
+                }
+            });
+        })
+    });
+</script>

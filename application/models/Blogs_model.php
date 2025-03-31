@@ -17,8 +17,7 @@ class Blogs_model extends CI_Model {
     public function get_recent_blogs_with_author(){
             $query = "SELECT blogs.*, authors.name AS author_name
             FROM blogs
-            INNER JOIN authors ON blogs.author_id = authors.id
-            LIMIT 4;";
+            INNER JOIN authors ON blogs.author_id = authors.id;";
             return $this->db->query($query)->result_array();
         
     }
@@ -27,6 +26,32 @@ class Blogs_model extends CI_Model {
         $query="SELECT * FROM blogs where id='$id'";
         return $this->db->query($query)->result_array();
     }
+
+    public function get_categories(){
+        $query = "SELECT DISTINCT category 
+                FROM blogs 
+                WHERE category IS NOT NULL
+                ORDER BY category ASC";
+        return $this->db->query($query)->result_array();
+    
+      }
+
+      public function get_specific_category_blogs($category){
+        $query = "SELECT * from blogs where category='$category'";
+        return $this->db->query($query)->result_array();
+    
+      }
+
+      public function get_specific_blogs_offset_lim($limit,$offset,$category=null){
+        if($category){
+            $query = "SELECT * from blogs where category='$category' limit $limit offset $offset";
+        }
+        else{
+            $query = "SELECT * from blogs  limit $limit offset $offset";
+        }
+        return $this->db->query($query)->result_array();
+    
+      }
     
   
 
