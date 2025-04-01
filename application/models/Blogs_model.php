@@ -23,7 +23,10 @@ class Blogs_model extends CI_Model {
     }
 
     public function get_blog_by_id($id){
-        $query="SELECT * FROM blogs where id='$id'";
+        $query = "SELECT blogs.*, authors.name AS author_name,authors.about AS author_about,authors.image as author_image
+                  FROM blogs
+                  INNER JOIN authors ON blogs.author_id = authors.id 
+                  WHERE blogs.id='$id'";
         return $this->db->query($query)->result_array();
     }
 

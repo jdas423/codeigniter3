@@ -50,6 +50,9 @@ class Patients extends CI_Controller {
             show_error('Method not allowed', 405);
         }
     }
+
+
+    
    
 
 

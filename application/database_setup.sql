@@ -34,6 +34,7 @@ CREATE TABLE `blogs` (
   `author_id` int(11) DEFAULT NULL,
   `title` varchar(200) COLLATE latin1_swedish_ci DEFAULT NULL,
   `category` varchar(50) COLLATE latin1_swedish_ci DEFAULT NULL,
+  "table_of content" JSON COLLATE latin1_swedish_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `author_id` (`author_id`),
   CONSTRAINT `fk_blog_author` FOREIGN KEY (`author_id`) REFERENCES `authors` (`id`) ON DELETE SET NULL ON UPDATE CASCADE

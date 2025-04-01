@@ -32,7 +32,10 @@ class Blogs extends CI_Controller {
 	{
 		$headerData = load_header_data();
 		$this->load->model('blogs_model');
-		$data["blog"] = $this->blogs_model->get_blog_by_id($id);
+		$data["blog"] = $this->blogs_model->get_blog_by_id($id)[0];
+		$data["blogs"][]=$this->blogs_model->get_blog_by_id(2);
+		$data["blogs"][]=$this->blogs_model->get_blog_by_id(3);
+		$data["recent_blogs"]=$this->blogs_model->get_recent_blogs();
 		$this->load->view('head_individual_blog', );
 		$this->load->view('header',$headerData);
 		$this->load->view('individual_blog',$data );
